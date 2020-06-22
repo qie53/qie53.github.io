@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>log4j配置 | penguin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="">
+    <meta name="description" content="log4j配置文件（log4j .properties） log4j日志等级(小—&gt;大) off fatal error warn info debug all   用什么输出: file:log日志的形式输出 console:控制台输出  appender输出类型配置 org.apache.log4j.ConsoleAppender(控制台) org.apache.log4j.FileAp">
+<meta property="og:type" content="article">
+<meta property="og:title" content="log4j配置">
+<meta property="og:url" content="http://yoursite.com/2020/06/22/log4j%E9%85%8D%E7%BD%AE/index.html">
+<meta property="og:site_name" content="penguin">
+<meta property="og:description" content="log4j配置文件（log4j .properties） log4j日志等级(小—&gt;大) off fatal error warn info debug all   用什么输出: file:log日志的形式输出 console:控制台输出  appender输出类型配置 org.apache.log4j.ConsoleAppender(控制台) org.apache.log4j.FileAp">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-06-22T09:13:28.939Z">
+<meta property="article:modified_time" content="2019-08-21T08:57:42.940Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/back.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/MyQie.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">John Doe</h5>
+          <a href="mailto:1321931867@qq.com" title="1321931867@qq.com" class="mail">1321931867@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/qie53" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">log4j配置</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">log4j配置</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2020-06-22T09:13:28.939Z" itemprop="datePublished" class="page-time">
+  2020-06-22
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#log4j"><span class="post-toc-number">1.</span> <span class="post-toc-text">log4j</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#配置文件（log4j-properties）"><span class="post-toc-number">1.0.0.1.</span> <span class="post-toc-text">配置文件（log4j .properties）</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#log4j日志等级-小—-gt-大"><span class="post-toc-number">1.0.0.2.</span> <span class="post-toc-text">log4j日志等级(小—&gt;大)</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#用什么输出"><span class="post-toc-number">1.0.0.3.</span> <span class="post-toc-text">用什么输出:</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#appender输出类型配置"><span class="post-toc-number">1.0.0.4.</span> <span class="post-toc-text">appender输出类型配置</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#布局"><span class="post-toc-number">1.0.0.5.</span> <span class="post-toc-text">布局</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#符号所代表的含义："><span class="post-toc-number">1.0.0.6.</span> <span class="post-toc-text">符号所代表的含义：</span></a></li></ol></li></ol></li></ol></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-log4j配置"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">log4j配置</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2020-06-22 17:13:28" datetime="2020-06-22T09:13:28.939Z"  itemprop="datePublished">2020-06-22</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="log4j"><a href="#log4j" class="headerlink" title="log4j"></a>log4j</h1><h4 id="配置文件（log4j-properties）"><a href="#配置文件（log4j-properties）" class="headerlink" title="配置文件（log4j .properties）"></a>配置文件（log4j .properties）</h4><hr>
+<h4 id="log4j日志等级-小—-gt-大"><a href="#log4j日志等级-小—-gt-大" class="headerlink" title="log4j日志等级(小—&gt;大)"></a>log4j日志等级(小—&gt;大)</h4><ul>
+<li>off</li>
+<li>fatal</li>
+<li>error</li>
+<li>warn</li>
+<li>info</li>
+<li>debug</li>
+<li>all</li>
+</ul>
+<hr>
+<h4 id="用什么输出"><a href="#用什么输出" class="headerlink" title="用什么输出:"></a>用什么输出:</h4><ul>
+<li>file:log日志的形式输出</li>
+<li>console:控制台输出</li>
+</ul>
+<h4 id="appender输出类型配置"><a href="#appender输出类型配置" class="headerlink" title="appender输出类型配置"></a>appender输出类型配置</h4><ul>
+<li>org.apache.log4j.ConsoleAppender(控制台)</li>
+<li>org.apache.log4j.FileAppender(文件:追加)</li>
+<li>org.apache.log4j.DailyRollingFileAppender(每天产生一个日子文件)</li>
+<li>org.apache.log4j.RollingFileAppender(文件大小到达指定的大小产生一个新的)</li>
+<li>org.apache.log4j.WriterAppender(将日志以流的形式发送到任意位置)</li>
+</ul>
+<h4 id="布局"><a href="#布局" class="headerlink" title="布局"></a>布局</h4><ol>
+<li>org.apache.log4j.HTMLLayout（以HTML表格形式布局）</li>
+<li><font color = "red">org.apache.log4j.PatternLayout（可以灵活地指定布局模式）常用</font></li>
+<li>org.apache.log4j.SimpleLayout（包含日志信息的级别和信息字符串）</li>
+<li>org.apache.log4j.TTCCLayout（包含日志产生的时间、线程、类别等等信息）</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">log4j.rootlogger&#x3D;等级(一个)，用什么输出...（多个）</span><br><span class="line"></span><br><span class="line">#Conole控制台输出配置</span><br><span class="line">log4j.appender.Conole&#x3D;org.apache.log4j.ConsoleAppender</span><br><span class="line">log4j.appender.Conole.layout&#x3D;org.apache.log4j.PatternLayout #一般用这个布局</span><br><span class="line">log4j.appender.Conole.layout.ConversionPattern&#x3D;输出的东西</span><br><span class="line"></span><br><span class="line">#File</span><br><span class="line">log4j.appender.File&#x3D;org.apache.log4j.FileAppender</span><br><span class="line">log4j.appender.File.layout&#x3D;org.apache.log4j.PatternLayout</span><br><span class="line">log4j.appender.File.File&#x3D;在哪个地方创建一个log文件</span><br><span class="line">log4j.appender.File.layout.ConversionPattern&#x3D;输出的东西</span><br><span class="line"></span><br><span class="line">#DailyRollingFile</span><br><span class="line">log4j.appender.DailyRollingFile&#x3D;org.apache.log4j.DailyRollingFileAppender</span><br><span class="line">log4j.appender.DailyRollingFile.layout&#x3D;org.apache.log4j.PatternLayout</span><br><span class="line">log4j.appender.DailyRollingFile.File&#x3D;在哪个地方创建一个log文件</span><br><span class="line">log4j.appender.DailyRollingFile.layout.ConversionPattern&#x3D;输出的东西</span><br><span class="line"></span><br><span class="line">#RollingFile</span><br><span class="line">log4j.appender.RollingFile&#x3D;org.apache.log4j.RollingFileAppender</span><br><span class="line">log4j.appender.RollingFile.layout&#x3D;org.apache.log4j.PatternLayout</span><br><span class="line">log4j.appender.RollingFile.MaxFileSize&#x3D;1KB #日志的最大尺寸</span><br><span class="line">log4j.appender.RollingFile.MaxBackupIndex&#x3D;3 #日志的个数，如果超过则覆盖</span><br><span class="line">log4j.appender.RollingFile.File&#x3D;在哪个地方创建一个log文件</span><br><span class="line">log4j.appender.RollingFile.layout.ConversionPattern&#x3D;输出的东西</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">log4j.rootLogger&#x3D;DEBUG,File,Conole</span><br><span class="line"></span><br><span class="line">#conole</span><br><span class="line">log4j.appender.Conole&#x3D;org.apache.log4j.ConsoleAppender</span><br><span class="line">log4j.appender.Conole.layout&#x3D;org.apache.log4j.PatternLayout</span><br><span class="line">log4j.appender.Conole.layout.ConversionPattern&#x3D;%d %p [%c] - %m%n</span><br><span class="line"></span><br><span class="line">#file</span><br><span class="line">log4j.appender.File&#x3D;org.apache.log4j.FileAppender</span><br><span class="line">log4j.appender.File.File&#x3D;&#x2F;Users&#x2F;penguin&#x2F;Desktop&#x2F;first&#x2F;logTest&#x2F;log.log</span><br><span class="line">log4j.appender.File.layout&#x3D;org.apache.log4j.PatternLayout</span><br><span class="line">log4j.appender.File.layout.ConversionPattern&#x3D;%d %p [%c] - %m%n</span><br></pre></td></tr></table></figure>
+
+<h4 id="符号所代表的含义："><a href="#符号所代表的含义：" class="headerlink" title="符号所代表的含义："></a>符号所代表的含义：</h4><ul>
+<li>%p: 输出日志信息优先级，即DEBUG，INFO，WARN，ERROR，FATAL,</li>
+<li>%d: 输出日志时间点的日期或时间，默认格式为ISO8601，也可以在其后指定格式，比如：<ul>
+<li>%d{yyy MMM dd HH:mm:ss,SSS}，输出类似：2002年10月18日 22：10：28，921</li>
+</ul>
+</li>
+<li>%r: 输出自应用启动到输出该log信息耗费的毫秒数</li>
+<li>%c: 输出日志信息所属的类目，通常就是所在类的全名</li>
+<li>%t: 输出产生该日志事件的线程名</li>
+<li>%l: 输出日志事件的发生位置，相当于%C.%M(%F:%L)的组合,包括类目名、发生的线程，以及在代码中的行数。举例：Testlog4.main (TestLog4.java:10)</li>
+<li>%x: 输出和当前线程相关联的NDC(嵌套诊断环境),尤其用到像java servlets这样的多客户多线程的应用中。</li>
+<li>%%: 输出一个”%”字符</li>
+<li>%F: 输出日志消息产生时所在的文件名称</li>
+<li>%L: 输出代码中的行号</li>
+<li>%m: 输出代码中指定的消息,产生的日志具体信息</li>
+<li>%n: 输出一个回车换行符，Windows平台为”\r\n”，Unix平台为”\n”输出日志信息换行</li>
+</ul>
+<ul>
+<li>可以在%与模式字符之间加上修饰符来控制其最小宽度、最大宽度、和文本的对齐方式。如：<ol>
+<li>%20c：指定输出category的名称，最小的宽度是20，如果category的名称小于20的话，默认的情况下右对齐。</li>
+<li>%-20c:指定输出category的名称，最小的宽度是20，如果category的名称小于20的话，”-“号指定左对齐。</li>
+<li>%.30c:指定输出category的名称，最大的宽度是30，如果category的名称大于30的话，就会将左边多出的字符截掉，但小于30的话也不会有空格。</li>
+<li>%20.30c:如果category的名称小于20就补空格，并且右对齐，如果其名称长于30字符，就从左边较远输出的字符截掉。</li>
+</ol>
+</li>
+</ul>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    Last updated: <time datetime="2019-08-21T08:57:42.940Z" itemprop="dateUpdated">2019-08-21 16:57:42</time>
+</span><br>
+
+
+        
+        这里可以写作者留言，标签和 hexo 中所有变量及辅助函数等均可调用，示例：<a href="/2020/06/22/log4j%E9%85%8D%E7%BD%AE/" target="_blank" rel="external">http://yoursite.com/2020/06/22/log4j%E9%85%8D%E7%BD%AE/</a>
+        
+    </div>
+    
+    <footer>
+        <a href="http://yoursite.com">
+            <img src="/img/MyQie.jpg" alt="John Doe">
+            John Doe
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2020/06/22/log4j%E9%85%8D%E7%BD%AE/&title=《log4j配置》 — penguin&pic=http://yoursite.com/img/MyQie.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2020/06/22/log4j%E9%85%8D%E7%BD%AE/&title=《log4j配置》 — penguin&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2020/06/22/log4j%E9%85%8D%E7%BD%AE/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《log4j配置》 — penguin&url=http://yoursite.com/2020/06/22/log4j%E9%85%8D%E7%BD%AE/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2020/06/22/log4j%E9%85%8D%E7%BD%AE/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2020/06/22/mac%E7%BB%88%E7%AB%AF%E5%91%BD%E4%BB%A4/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">mac终端命令</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2020/06/07/Hadoop/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">Hadoop</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/false" alt="打赏二维码">
+        </div>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+            <span>This blog is licensed under a <a rel="license noopener" href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International License</a>.</span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>John Doe &copy; 2015 - 2020</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2020/06/22/log4j%E9%85%8D%E7%BD%AE/&title=《log4j配置》 — penguin&pic=http://yoursite.com/img/MyQie.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2020/06/22/log4j%E9%85%8D%E7%BD%AE/&title=《log4j配置》 — penguin&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2020/06/22/log4j%E9%85%8D%E7%BD%AE/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《log4j配置》 — penguin&url=http://yoursite.com/2020/06/22/log4j%E9%85%8D%E7%BD%AE/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2020/06/22/log4j%E9%85%8D%E7%BD%AE/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2020/06/22/log4j%E9%85%8D%E7%BD%AE/" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>

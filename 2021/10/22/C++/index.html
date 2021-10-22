@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>C++ | Penguin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="">
+    <meta name="description" content="C++基础： c++后缀：.cpp c++编译器：tdm-gcc 用dos看gcc版本：g++ -v 用dos编译：g++ -o 输出的名字 要编译的cpp文件。如：g++ -o Hellow Hellow.cpp 用doc运行：直接输入输出的exe文件即可  用c++写hello world123456#include&lt;iostream&gt;using namespace std;int">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C++">
+<meta property="og:url" content="http://yoursite.com/2021/10/22/C++/index.html">
+<meta property="og:site_name" content="Penguin">
+<meta property="og:description" content="C++基础： c++后缀：.cpp c++编译器：tdm-gcc 用dos看gcc版本：g++ -v 用dos编译：g++ -o 输出的名字 要编译的cpp文件。如：g++ -o Hellow Hellow.cpp 用doc运行：直接输入输出的exe文件即可  用c++写hello world123456#include&lt;iostream&gt;using namespace std;int">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-10-22T06:18:12.164Z">
+<meta property="article:modified_time" content="2021-10-22T06:30:53.552Z">
+<meta property="article:author" content="Penguin">
+<meta name="twitter:card" content="summary">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/back.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/MyQie.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Penguin</h5>
+          <a href="mailto:1321931867@qq.com" title="1321931867@qq.com" class="mail">1321931867@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                文章
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/qie53" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">C++</div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">C++</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2021-10-22T06:18:12.164Z" itemprop="datePublished" class="page-time">
+  2021-10-22
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#C"><span class="post-toc-number">1.</span> <span class="post-toc-text">C++</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#基础："><span class="post-toc-number">1.0.0.1.</span> <span class="post-toc-text">基础：</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#用c-写hello-world"><span class="post-toc-number">1.0.0.1.1.</span> <span class="post-toc-text">用c++写hello world</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#从控制台输入：cin-gt-gt-a"><span class="post-toc-number">1.0.0.1.2.</span> <span class="post-toc-text">从控制台输入：cin&gt;&gt;a</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#在dos乱码时："><span class="post-toc-number">1.0.0.1.3.</span> <span class="post-toc-text">在dos乱码时：</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#在CLion中乱码："><span class="post-toc-number">1.0.0.1.4.</span> <span class="post-toc-text">在CLion中乱码：</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#在c-中小数点"><span class="post-toc-number">1.0.0.1.5.</span> <span class="post-toc-text">在c++中小数点</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#goto用法（直接跳过代码到指定代码）："><span class="post-toc-number">1.0.0.1.6.</span> <span class="post-toc-text">goto用法（直接跳过代码到指定代码）：</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#数组的定义："><span class="post-toc-number">1.0.0.1.7.</span> <span class="post-toc-text">数组的定义：</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#指针："><span class="post-toc-number">1.0.0.1.8.</span> <span class="post-toc-text">指针：</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#定义数据结构（struct）"><span class="post-toc-number">1.0.0.1.9.</span> <span class="post-toc-text">定义数据结构（struct）</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#使用printf"><span class="post-toc-number">1.0.0.1.10.</span> <span class="post-toc-text">使用printf</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#CLion破解-永久试用30天-半成品还需要jar包-："><span class="post-toc-number">2.</span> <span class="post-toc-text">CLion破解(永久试用30天,半成品还需要jar包)：</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-C++"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">C++</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2021-10-22 14:18:12" datetime="2021-10-22T06:18:12.164Z"  itemprop="datePublished">2021-10-22</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="C"><a href="#C" class="headerlink" title="C++"></a>C++</h1><h4 id="基础："><a href="#基础：" class="headerlink" title="基础："></a>基础：</h4><ul>
+<li>c++后缀：.cpp</li>
+<li>c++编译器：tdm-gcc</li>
+<li>用dos看gcc版本：g++ -v</li>
+<li>用dos编译：g++ -o 输出的名字 要编译的cpp文件。如：g++ -o Hellow Hellow.cpp</li>
+<li>用doc运行：直接输入输出的exe文件即可</li>
+</ul>
+<h5 id="用c-写hello-world"><a href="#用c-写hello-world" class="headerlink" title="用c++写hello world"></a>用c++写hello world</h5><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="string">"hello world"</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>常量的定义：</p>
+<ul>
+<li>#define i 0   (顶上定义)</li>
+<li>const int i = 0;    （代码行定义）</li>
+</ul>
+<p>求出占内存大小：sizeof()</p>
+<h5 id="从控制台输入：cin-gt-gt-a"><a href="#从控制台输入：cin-gt-gt-a" class="headerlink" title="从控制台输入：cin&gt;&gt;a"></a>从控制台输入：cin&gt;&gt;a</h5><h5 id="在dos乱码时："><a href="#在dos乱码时：" class="headerlink" title="在dos乱码时："></a>在dos乱码时：</h5><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;windows.h&gt;</span></span></span><br><span class="line">SetConsoleOutputCP(<span class="number">65001</span>);</span><br></pre></td></tr></table></figure>
+
+<h5 id="在CLion中乱码："><a href="#在CLion中乱码：" class="headerlink" title="在CLion中乱码："></a>在CLion中乱码：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">打开Settings-》File Encodings》里面全部改为UTF-8》CLion右下角改成GBK</span><br></pre></td></tr></table></figure>
+
+<h5 id="在c-中小数点"><a href="#在c-中小数点" class="headerlink" title="在c++中小数点"></a>在c++中小数点</h5><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iomanip&gt;</span></span></span><br><span class="line"><span class="comment">//10：位数   3：设置后面那个几位数  3.14</span></span><br><span class="line"><span class="built_in">cout</span>&lt;&lt;setw(<span class="number">10</span>)&lt;&lt;setprecision(<span class="number">3</span>)&lt;&lt;<span class="number">3.14159265</span>;</span><br><span class="line"><span class="comment">//加上fixed再加setprecision保留小数点后2位</span></span><br><span class="line"><span class="built_in">cout</span>&lt;&lt;fixed&lt;&lt;setprecision(<span class="number">2</span>)&lt;&lt;<span class="number">13.14159265</span>;</span><br></pre></td></tr></table></figure>
+
+<h5 id="goto用法（直接跳过代码到指定代码）："><a href="#goto用法（直接跳过代码到指定代码）：" class="headerlink" title="goto用法（直接跳过代码到指定代码）："></a>goto用法（直接跳过代码到指定代码）：</h5><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cout</span>&lt;&lt;<span class="number">1</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line"><span class="keyword">goto</span> a;</span><br><span class="line"><span class="built_in">cout</span>&lt;&lt;<span class="number">2</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line"><span class="built_in">cout</span>&lt;&lt;<span class="number">3</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">a:</span><br><span class="line"><span class="built_in">cout</span>&lt;&lt;<span class="number">4</span>&lt;&lt;<span class="built_in">endl</span>;</span><br></pre></td></tr></table></figure>
+
+<h5 id="数组的定义："><a href="#数组的定义：" class="headerlink" title="数组的定义："></a>数组的定义：</h5><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//第一</span></span><br><span class="line"><span class="keyword">int</span> a[]=&#123;<span class="number">1</span>,<span class="number">2</span>&#125;;</span><br><span class="line"><span class="comment">//第二</span></span><br><span class="line"><span class="keyword">int</span> a[<span class="number">100</span>];</span><br><span class="line"><span class="comment">//第三</span></span><br><span class="line"><span class="keyword">int</span> a[<span class="number">10</span>]=&#123;<span class="number">1</span>,<span class="number">2</span>&#125;;</span><br></pre></td></tr></table></figure>
+
+<h5 id="指针："><a href="#指针：" class="headerlink" title="指针："></a>指针：</h5><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> i=<span class="number">10</span>;</span><br><span class="line"><span class="comment">//创建指针</span></span><br><span class="line"><span class="keyword">int</span> * p;</span><br><span class="line"><span class="comment">//关联指针</span></span><br><span class="line">p=&amp;i;</span><br><span class="line"><span class="comment">//用指针找到数</span></span><br><span class="line">*p=<span class="number">100</span>;</span><br><span class="line"><span class="comment">//空指针(访问空指针会报错)</span></span><br><span class="line"><span class="built_in">string</span> * a=<span class="literal">NULL</span>;</span><br><span class="line"><span class="comment">//野指针(访问野指针会报错)</span></span><br><span class="line"><span class="keyword">int</span> * p=(<span class="keyword">int</span>)<span class="number">0x1100</span>;</span><br><span class="line"><span class="comment">//空指针和野指针都不是我们申请的我们访问会出错</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="定义数据结构（struct）"><a href="#定义数据结构（struct）" class="headerlink" title="定义数据结构（struct）"></a>定义数据结构（struct）</h5><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//定义学生数据</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">student</span>&#123;</span></span><br><span class="line">    <span class="built_in">string</span> name;</span><br><span class="line">    <span class="keyword">int</span> age;</span><br><span class="line">    <span class="keyword">int</span> score;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="class"><span class="keyword">struct</span> <span class="title">student</span> <span class="title">aa</span>=&#123;</span><span class="string">"张三"</span>,<span class="number">1</span>,<span class="number">20</span>&#125;;</span><br><span class="line">	<span class="comment">//或者</span></span><br><span class="line">	student aa1;</span><br><span class="line">	aa1.name=<span class="string">"李四"</span>;</span><br><span class="line">	<span class="comment">//用指针那值   索引到aa</span></span><br><span class="line">	student * p = &amp;aa;</span><br><span class="line">	<span class="comment">//拿到name</span></span><br><span class="line">	aa-&gt;name;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="使用printf"><a href="#使用printf" class="headerlink" title="使用printf"></a>使用printf</h5><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//加头文件</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br></pre></td></tr></table></figure>
+
+<h1 id="CLion破解-永久试用30天-半成品还需要jar包-："><a href="#CLion破解-永久试用30天-半成品还需要jar包-：" class="headerlink" title="CLion破解(永久试用30天,半成品还需要jar包)："></a>CLion破解(永久试用30天,半成品还需要jar包)：</h1><ul>
+<li><a href="https://blog.csdn.net/Fairy_v/article/details/118495075" target="_blank" rel="noopener">https://blog.csdn.net/Fairy_v/article/details/118495075</a></li>
+</ul>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    Last updated: <time datetime="2021-10-22T06:30:53.552Z" itemprop="dateUpdated">2021-10-22 14:30:53</time>
+</span><br>
+
+
+        
+    </div>
+    
+    <footer>
+        <a href="http://yoursite.com">
+            <img src="/img/MyQie.jpg" alt="Penguin">
+            Penguin
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2021/10/22/C++/&title=《C++》 — Penguin&pic=http://yoursite.com/img/MyQie.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2021/10/22/C++/&title=《C++》 — Penguin&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2021/10/22/C++/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《C++》 — Penguin&url=http://yoursite.com/2021/10/22/C++/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2021/10/22/C++/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2021/10/22/HTML/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">HTML</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2020/06/22/indigo%E4%B8%BB%E9%A2%98/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">indigo主题</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/MyQie.jpg" alt="打赏二维码">
+        </div>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+            <span>This blog is licensed under a <a rel="license noopener" href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International License</a>.</span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>Penguin &copy; 2019 - 2021</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2021/10/22/C++/&title=《C++》 — Penguin&pic=http://yoursite.com/img/MyQie.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2021/10/22/C++/&title=《C++》 — Penguin&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2021/10/22/C++/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《C++》 — Penguin&url=http://yoursite.com/2021/10/22/C++/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2021/10/22/C++/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2021/10/22/C++/" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>

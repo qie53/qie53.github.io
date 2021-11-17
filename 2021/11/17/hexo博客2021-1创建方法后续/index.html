@@ -14,22 +14,22 @@
     
     
     
-    <title>Test库 | Penguin</title>
+    <title>hexo博客2021-1创建方法后续 | Penguin</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="theme-color" content="#3F51B5">
     
     
     <meta name="keywords" content="">
-    <meta name="description" content="Test库">
+    <meta name="description" content="生成SSH添加到GitHub git config –global user.name “yourname”git config –global user.email “youremail” 分别运行这两个命令，”yourname“为你的GitHub账号ID，“”youremail“为注册GitHub的邮箱 git config user.namegit config user.email 使用这">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Test库">
-<meta property="og:url" content="http://yoursite.com/2020/06/22/Test%E5%BA%93/index.html">
+<meta property="og:title" content="hexo博客2021-1创建方法后续">
+<meta property="og:url" content="http://yoursite.com/2021/11/17/hexo%E5%8D%9A%E5%AE%A22021-1%E5%88%9B%E5%BB%BA%E6%96%B9%E6%B3%95%E5%90%8E%E7%BB%AD/index.html">
 <meta property="og:site_name" content="Penguin">
-<meta property="og:description" content="Test库">
+<meta property="og:description" content="生成SSH添加到GitHub git config –global user.name “yourname”git config –global user.email “youremail” 分别运行这两个命令，”yourname“为你的GitHub账号ID，“”youremail“为注册GitHub的邮箱 git config user.namegit config user.email 使用这">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-06-22T10:33:03.686Z">
-<meta property="article:modified_time" content="2020-06-22T10:34:07.213Z">
+<meta property="article:published_time" content="2021-11-17T04:48:43.494Z">
+<meta property="article:modified_time" content="2021-11-17T04:48:08.047Z">
 <meta property="article:author" content="Penguin">
 <meta name="twitter:card" content="summary">
     
@@ -96,7 +96,7 @@
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">Test库</div>
+        <div class="flex-col header-title ellipsis">hexo博客2021-1创建方法后续</div>
         
         
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
@@ -108,11 +108,11 @@
 <header class="content-header post-header">
 
     <div class="container fade-scale">
-        <h1 class="title">Test库</h1>
+        <h1 class="title">hexo博客2021-1创建方法后续</h1>
         <h5 class="subtitle">
             
-                <time datetime="2020-06-22T10:33:03.686Z" itemprop="datePublished" class="page-time">
-  2020-06-22
+                <time datetime="2021-11-17T04:48:43.494Z" itemprop="datePublished" class="page-time">
+  2021-11-17
 </time>
 
 
@@ -129,13 +129,13 @@
 <div class="container body-wrap">
     
 
-<article id="post-Test库"
+<article id="post-hexo博客2021-1创建方法后续"
   class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
-        <h1 class="post-card-title">Test库</h1>
+        <h1 class="post-card-title">hexo博客2021-1创建方法后续</h1>
         <div class="post-meta">
-            <time class="post-time" title="2020-06-22 18:33:03" datetime="2020-06-22T10:33:03.686Z"  itemprop="datePublished">2020-06-22</time>
+            <time class="post-time" title="2021-11-17 12:48:43" datetime="2021-11-17T04:48:43.494Z"  itemprop="datePublished">2021-11-17</time>
 
             
 
@@ -148,7 +148,30 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <p><a href="https://github.com/qie53/test" target="_blank" rel="noopener">Test库</a></p>
+            <p>生成SSH添加到GitHub</p>
+<p>git config –global user.name “yourname”<br>git config –global user.email “youremail”</p>
+<p>分别运行这两个命令，”yourname“为你的GitHub账号ID，“”youremail“为注册GitHub的邮箱</p>
+<p>git config user.name<br>git config user.email</p>
+<p>使用这两条命令检查是否正确</p>
+<p>ssh-keygen -t rsa -C “youremail”</p>
+<p>使用该命令生成SSH，一直回车知道提示生成.ssh文件夹，按照提示的目录找到.ssh文件夹</p>
+<p>C:\Users\Penguin.ssh\id_rsa.pub</p>
+<p>用记事本的方式点开id_rsa.pub文件，全部复制</p>
+<p>打开GitHub</p>
+<p>进入头像下的设置</p>
+<p>点击New SSH key添加SSH</p>
+<p>ssh -T <a href="mailto:git@github.com">git@github.com</a></p>
+<p>使用该命令查看是否成功添加，若成功添加则会出现下面的描述</p>
+<p>将Hexo部署到GitHub</p>
+<p>打开myblog文件夹中的_config.yml文件，拉到最后，将最后的信息修改为</p>
+<p>deploy:<br>  type: git<br>  repo: <a href="mailto:git@github.com">git@github.com</a>:YourgithubName/YourgithubName.github.io.git<br>  branch: main</p>
+<p>因为GitHub将之前的master分支改为main，所以这里的branch也更改为main，不影响使用</p>
+<p>rope项在GitHub里复制，进入建好的仓库</p>
+<p>将其完整的复制下来即可。注：修改信息每个分号前都有一个空格，若没有将会导致部署失败</p>
+<p>npm install hexo-deployer-git –save<br>1<br>在myblog文件夹中右键git bash运行此命令，安装deploy-git，这样才能使用部署命令部署到GitHub</p>
+<p>hexo clean<br>hexo g<br>hexo d</p>
+<p>最后运行这三个命令进行部署，每次对博客进行修改后都需要重新上传部署，依然使用这三个命令</p>
+<p>至此基于Hexo+GitHub的博客搭建完毕。</p>
 
         </div>
 
@@ -157,7 +180,7 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2020-06-22T10:34:07.213Z" itemprop="dateUpdated">2020-06-22 18:34:07</time>
+    Last updated: <time datetime="2021-11-17T04:48:08.047Z" itemprop="dateUpdated">2021-11-17 12:48:08</time>
 </span><br>
 
 
@@ -189,7 +212,7 @@
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2020/06/22/Test%E5%BA%93/&title=《Test库》 — Penguin&pic=http://yoursite.com/img/MyQie.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2021/11/17/hexo%E5%8D%9A%E5%AE%A22021-1%E5%88%9B%E5%BB%BA%E6%96%B9%E6%B3%95%E5%90%8E%E7%BB%AD/&title=《hexo博客2021-1创建方法后续》 — Penguin&pic=http://yoursite.com/img/MyQie.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -199,22 +222,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2020/06/22/Test%E5%BA%93/&title=《Test库》 — Penguin&source=" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2021/11/17/hexo%E5%8D%9A%E5%AE%A22021-1%E5%88%9B%E5%BB%BA%E6%96%B9%E6%B3%95%E5%90%8E%E7%BB%AD/&title=《hexo博客2021-1创建方法后续》 — Penguin&source=" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2020/06/22/Test%E5%BA%93/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2021/11/17/hexo%E5%8D%9A%E5%AE%A22021-1%E5%88%9B%E5%BB%BA%E6%96%B9%E6%B3%95%E5%90%8E%E7%BB%AD/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Test库》 — Penguin&url=http://yoursite.com/2020/06/22/Test%E5%BA%93/&via=http://yoursite.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《hexo博客2021-1创建方法后续》 — Penguin&url=http://yoursite.com/2021/11/17/hexo%E5%8D%9A%E5%AE%A22021-1%E5%88%9B%E5%BB%BA%E6%96%B9%E6%B3%95%E5%90%8E%E7%BB%AD/&via=http://yoursite.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2020/06/22/Test%E5%BA%93/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2021/11/17/hexo%E5%8D%9A%E5%AE%A22021-1%E5%88%9B%E5%BB%BA%E6%96%B9%E6%B3%95%E5%90%8E%E7%BB%AD/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -237,18 +260,18 @@
 <nav class="post-nav flex-row flex-justify-between">
   
     <div class="waves-block waves-effect prev">
-      <a href="/2020/06/22/indigo%E4%B8%BB%E9%A2%98/" id="post-prev" class="post-nav-link">
+      <a href="/2021/11/17/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" id="post-prev" class="post-nav-link">
         <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">indigo主题</h4>
+        <h4 class="title">正则表达式</h4>
       </a>
     </div>
   
 
   
     <div class="waves-block waves-effect next">
-      <a href="/2020/06/22/heox%E5%8D%9A%E5%AE%A2%E5%88%9B%E5%BB%BA%E6%96%B9%E6%B3%95/" id="post-next" class="post-nav-link">
+      <a href="/2021/10/22/MySQL%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C%E5%92%8CGit/" id="post-next" class="post-nav-link">
         <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">heox博客创建方法</h4>
+        <h4 class="title">MySQL基础操作和Git</h4>
       </a>
     </div>
   
@@ -336,7 +359,7 @@
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2020/06/22/Test%E5%BA%93/&title=《Test库》 — Penguin&pic=http://yoursite.com/img/MyQie.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2021/11/17/hexo%E5%8D%9A%E5%AE%A22021-1%E5%88%9B%E5%BB%BA%E6%96%B9%E6%B3%95%E5%90%8E%E7%BB%AD/&title=《hexo博客2021-1创建方法后续》 — Penguin&pic=http://yoursite.com/img/MyQie.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -346,22 +369,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2020/06/22/Test%E5%BA%93/&title=《Test库》 — Penguin&source=" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2021/11/17/hexo%E5%8D%9A%E5%AE%A22021-1%E5%88%9B%E5%BB%BA%E6%96%B9%E6%B3%95%E5%90%8E%E7%BB%AD/&title=《hexo博客2021-1创建方法后续》 — Penguin&source=" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2020/06/22/Test%E5%BA%93/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2021/11/17/hexo%E5%8D%9A%E5%AE%A22021-1%E5%88%9B%E5%BB%BA%E6%96%B9%E6%B3%95%E5%90%8E%E7%BB%AD/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Test库》 — Penguin&url=http://yoursite.com/2020/06/22/Test%E5%BA%93/&via=http://yoursite.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《hexo博客2021-1创建方法后续》 — Penguin&url=http://yoursite.com/2021/11/17/hexo%E5%8D%9A%E5%AE%A22021-1%E5%88%9B%E5%BB%BA%E6%96%B9%E6%B3%95%E5%90%8E%E7%BB%AD/&via=http://yoursite.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2020/06/22/Test%E5%BA%93/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2021/11/17/hexo%E5%8D%9A%E5%AE%A22021-1%E5%88%9B%E5%BB%BA%E6%96%B9%E6%B3%95%E5%90%8E%E7%BB%AD/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -372,7 +395,7 @@
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2020/06/22/Test%E5%BA%93/" alt="微信分享二维码">
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2021/11/17/hexo%E5%8D%9A%E5%AE%A22021-1%E5%88%9B%E5%BB%BA%E6%96%B9%E6%B3%95%E5%90%8E%E7%BB%AD/" alt="微信分享二维码">
 </div>
 
 

@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>SQLServer | Penguin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="">
+    <meta name="description" content="SQLServer创建注释12--单行注释&#x2F;*多行注释*&#x2F;  创建表结构（结尾） 主文件（只有一个）：mdf 副文件（能存创建多个）:ndf 日志文件（能存创建多个）:ldf  12345678910111213141516171819202122232425create database databaseNameon(name&#x3D;databaseName_data,filename&#x3D;&#39;H:\sql">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SQLServer">
+<meta property="og:url" content="http://yoursite.com/2021/11/19/SQLServer/index.html">
+<meta property="og:site_name" content="Penguin">
+<meta property="og:description" content="SQLServer创建注释12--单行注释&#x2F;*多行注释*&#x2F;  创建表结构（结尾） 主文件（只有一个）：mdf 副文件（能存创建多个）:ndf 日志文件（能存创建多个）:ldf  12345678910111213141516171819202122232425create database databaseNameon(name&#x3D;databaseName_data,filename&#x3D;&#39;H:\sql">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-11-19T08:56:15.662Z">
+<meta property="article:modified_time" content="2021-11-19T08:55:29.437Z">
+<meta property="article:author" content="Penguin">
+<meta name="twitter:card" content="summary">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/back.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/MyQie.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Penguin</h5>
+          <a href="mailto:1321931867@qq.com" title="1321931867@qq.com" class="mail">1321931867@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                文章
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/qie53" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">SQLServer</div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">SQLServer</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2021-11-19T08:56:15.662Z" itemprop="datePublished" class="page-time">
+  2021-11-19
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#SQLServer"><span class="post-toc-number">1.</span> <span class="post-toc-text">SQLServer</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#创建"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">创建</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#注释"><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">注释</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#创建表"><span class="post-toc-number">1.1.2.</span> <span class="post-toc-text">创建表</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#结构（结尾）"><span class="post-toc-number">1.1.2.1.</span> <span class="post-toc-text">结构（结尾）</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#查看的信息"><span class="post-toc-number">1.1.3.</span> <span class="post-toc-text">查看的信息</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#直接扩展文件"><span class="post-toc-number">1.1.4.</span> <span class="post-toc-text">直接扩展文件</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#文件扩容"><span class="post-toc-number">1.1.5.</span> <span class="post-toc-text">文件扩容</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#减少文件容量"><span class="post-toc-number">1.1.6.</span> <span class="post-toc-text">减少文件容量</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#建表"><span class="post-toc-number">1.1.7.</span> <span class="post-toc-text">建表</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#案例"><span class="post-toc-number">1.1.7.1.</span> <span class="post-toc-text">案例</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#查询"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">查询</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#查询第一条"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">查询第一条</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#去重复"><span class="post-toc-number">1.2.2.</span> <span class="post-toc-text">去重复</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#给查出来的字段命名"><span class="post-toc-number">1.2.3.</span> <span class="post-toc-text">给查出来的字段命名</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#各种方法"><span class="post-toc-number">1.2.4.</span> <span class="post-toc-text">各种方法</span></a></li></ol></li></ol></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-SQLServer"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">SQLServer</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2021-11-19 16:56:15" datetime="2021-11-19T08:56:15.662Z"  itemprop="datePublished">2021-11-19</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="SQLServer"><a href="#SQLServer" class="headerlink" title="SQLServer"></a>SQLServer</h1><h2 id="创建"><a href="#创建" class="headerlink" title="创建"></a>创建</h2><h3 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">--单行注释</span></span><br><span class="line"><span class="comment">/*多行注释*/</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="创建表"><a href="#创建表" class="headerlink" title="创建表"></a>创建表</h3><h4 id="结构（结尾）"><a href="#结构（结尾）" class="headerlink" title="结构（结尾）"></a>结构（结尾）</h4><ul>
+<li>主文件（只有一个）：mdf</li>
+<li>副文件（能存创建多个）:ndf</li>
+<li>日志文件（能存创建多个）:ldf</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">database</span> databaseName</span><br><span class="line"><span class="keyword">on</span></span><br><span class="line">(<span class="keyword">name</span>=databaseName_data,</span><br><span class="line">filename=<span class="string">'H:\sqlData\databaseName_data.mdf'</span>，</span><br><span class="line"> <span class="comment">--初始大小</span></span><br><span class="line"><span class="keyword">size</span>=<span class="number">10</span>,</span><br><span class="line"> <span class="comment">--最大大小（unlimited：为到磁盘不够）</span></span><br><span class="line"><span class="keyword">maxsize</span>=<span class="keyword">unlimited</span>,</span><br><span class="line"> <span class="comment">--每次增长多少</span></span><br><span class="line">filegrowth=<span class="number">10</span>%</span><br><span class="line">),</span><br><span class="line">(<span class="keyword">name</span>=databaseName2_data,</span><br><span class="line">filename=<span class="string">'H:\sqlData\databaseName2_data.ndf'</span>,</span><br><span class="line"><span class="keyword">size</span>=<span class="number">10</span>,</span><br><span class="line"><span class="keyword">maxsize</span>=<span class="keyword">unlimited</span>,</span><br><span class="line">filegrowth=<span class="number">10</span>%</span><br><span class="line">)</span><br><span class="line"><span class="keyword">log</span> <span class="keyword">on</span></span><br><span class="line">(</span><br><span class="line"><span class="keyword">name</span>=databaseName_log,</span><br><span class="line">filename=<span class="string">'H:\sqlData\databaseName_data.ldf'</span>,</span><br><span class="line"><span class="keyword">size</span>=<span class="number">1</span>,</span><br><span class="line"><span class="keyword">maxsize</span>=<span class="number">5</span>,</span><br><span class="line">filegrowth=<span class="number">1</span></span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<h3 id="查看的信息"><a href="#查看的信息" class="headerlink" title="查看的信息"></a>查看的信息</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">--查看数据库的信息</span></span><br><span class="line">sp_helpdb databaseName</span><br><span class="line"><span class="comment">--查看表的信息</span></span><br><span class="line">sp_help tableName</span><br></pre></td></tr></table></figure>
+
+<h3 id="直接扩展文件"><a href="#直接扩展文件" class="headerlink" title="直接扩展文件"></a>直接扩展文件</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">alter</span> <span class="keyword">database</span> databaseName</span><br><span class="line"><span class="keyword">add</span> <span class="keyword">file</span>(</span><br><span class="line"><span class="keyword">name</span>=databaseName,</span><br><span class="line">filename=<span class="string">'h:\sqlData\databaseName.ndf'</span>,</span><br><span class="line"><span class="keyword">size</span>=<span class="number">30</span>,</span><br><span class="line"><span class="keyword">maxsize</span> = <span class="keyword">unlimited</span>,</span><br><span class="line">filegrowth=<span class="number">20</span>%</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<h3 id="文件扩容"><a href="#文件扩容" class="headerlink" title="文件扩容"></a>文件扩容</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">alter</span> <span class="keyword">database</span> databaseName</span><br><span class="line"><span class="keyword">modify</span> <span class="keyword">file</span>(</span><br><span class="line"><span class="comment">--扩容文件的名字（上面创数据库给每个（mdf.ndf.ldf标的名字））</span></span><br><span class="line"><span class="keyword">name</span>=Student1,</span><br><span class="line"><span class="keyword">size</span>=<span class="number">40</span></span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<h3 id="减少文件容量"><a href="#减少文件容量" class="headerlink" title="减少文件容量"></a>减少文件容量</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">--文件名字  如：student1_data（上面创数据库给每个（mdf.ndf.ldf标的名字））</span></span><br><span class="line">dbcc shrinkfile('FileName',20)</span><br></pre></td></tr></table></figure>
+
+<h3 id="建表"><a href="#建表" class="headerlink" title="建表"></a>建表</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> tableName(</span><br><span class="line"><span class="comment">--primary key 主键（这玩意如果设了必须存在值）</span></span><br><span class="line">表头 数据类型 是否为空 (可加primary <span class="keyword">key</span>),</span><br><span class="line"><span class="comment">--default 设置默认值 如下：</span></span><br><span class="line">表头 数据类型 是否为空 (可加primary <span class="keyword">key</span>) <span class="keyword">default</span> <span class="string">'男'</span>,</span><br><span class="line">表头 数据类型 是否为空 (可加primary <span class="keyword">key</span>),</span><br><span class="line"><span class="comment">--primary key 也可以最后设置多值一起</span></span><br><span class="line">primary <span class="keyword">key</span>(<span class="keyword">sid</span>)</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<h4 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> studentTable(</span><br><span class="line"><span class="keyword">sid</span> <span class="built_in">char</span>(<span class="number">8</span>) <span class="keyword">not</span> <span class="literal">null</span> primary <span class="keyword">key</span>,</span><br><span class="line">sname <span class="built_in">varchar</span>(<span class="number">20</span>) <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">sex <span class="built_in">char</span>(<span class="number">2</span>) <span class="keyword">not</span> <span class="literal">null</span> <span class="keyword">default</span> <span class="string">'男'</span>,</span><br><span class="line">birthday <span class="built_in">date</span> <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">IDCard <span class="built_in">char</span>(<span class="number">18</span>) <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">phone <span class="built_in">varchar</span>(<span class="number">20</span>) <span class="literal">null</span>,</span><br><span class="line">email <span class="built_in">varchar</span>(<span class="number">20</span>) <span class="literal">null</span></span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<h2 id="查询"><a href="#查询" class="headerlink" title="查询"></a>查询</h2><h3 id="查询第一条"><a href="#查询第一条" class="headerlink" title="查询第一条"></a>查询第一条</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">--查询一张表的全部信息</span></span><br><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> tableName</span><br><span class="line"><span class="comment">--如果你想查询表里面的一个字段如：name你可以</span></span><br><span class="line"><span class="keyword">select</span> <span class="keyword">name</span> <span class="keyword">from</span> tableName</span><br></pre></td></tr></table></figure>
+
+<h3 id="去重复"><a href="#去重复" class="headerlink" title="去重复"></a>去重复</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">--查出来想去掉重复你可以使用 distinct 给想去重复的字段打上即可</span></span><br><span class="line"><span class="keyword">select</span> <span class="keyword">distinct</span> Title <span class="keyword">from</span> tableName</span><br></pre></td></tr></table></figure>
+
+<h3 id="给查出来的字段命名"><a href="#给查出来的字段命名" class="headerlink" title="给查出来的字段命名"></a>给查出来的字段命名</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">--写在字段后面即可</span></span><br><span class="line"><span class="keyword">select</span> <span class="keyword">name</span> 名字 <span class="keyword">from</span> tableName</span><br></pre></td></tr></table></figure>
+
+<p>查询前10条记录和前10%的记录</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">--10条记录</span></span><br><span class="line"><span class="keyword">select</span> top <span class="number">10</span> * <span class="keyword">from</span> tableName</span><br><span class="line"><span class="comment">--前10%的记录</span></span><br><span class="line"><span class="keyword">select</span> top <span class="number">10</span> <span class="keyword">percent</span> * <span class="keyword">from</span> tableName</span><br></pre></td></tr></table></figure>
+
+<h3 id="各种方法"><a href="#各种方法" class="headerlink" title="各种方法"></a>各种方法</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">--获得当前时间</span></span><br><span class="line">getdate()</span><br><span class="line"><span class="comment">--在getdate()中获得年</span></span><br><span class="line">year()</span><br></pre></td></tr></table></figure>
+
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    Last updated: <time datetime="2021-11-19T08:55:29.437Z" itemprop="dateUpdated">2021-11-19 16:55:29</time>
+</span><br>
+
+
+        
+    </div>
+    
+    <footer>
+        <a href="http://yoursite.com">
+            <img src="/img/MyQie.jpg" alt="Penguin">
+            Penguin
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2021/11/19/SQLServer/&title=《SQLServer》 — Penguin&pic=http://yoursite.com/img/MyQie.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2021/11/19/SQLServer/&title=《SQLServer》 — Penguin&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2021/11/19/SQLServer/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《SQLServer》 — Penguin&url=http://yoursite.com/2021/11/19/SQLServer/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2021/11/19/SQLServer/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2021/11/17/JAVA%E9%A2%98%E7%9B%AE/java%E5%8D%81%E8%BF%9B%E5%88%B6%E8%BD%AC%E4%BA%8C%E8%BF%9B%E5%88%B6/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">JAVA题目/java十进制转二进制</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/MyQie.jpg" alt="打赏二维码">
+        </div>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+            <span>This blog is licensed under a <a rel="license noopener" href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International License</a>.</span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>Penguin &copy; 2019 - 2021</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2021/11/19/SQLServer/&title=《SQLServer》 — Penguin&pic=http://yoursite.com/img/MyQie.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2021/11/19/SQLServer/&title=《SQLServer》 — Penguin&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2021/11/19/SQLServer/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《SQLServer》 — Penguin&url=http://yoursite.com/2021/11/19/SQLServer/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2021/11/19/SQLServer/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2021/11/19/SQLServer/" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>

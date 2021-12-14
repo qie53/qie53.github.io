@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>MySQL连接最JAVA基础 | Penguin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="">
+    <meta name="description" content="8.0驱动Class.forName(“com.mysql.cj.jdbc.Driver”); 5.7驱动Class.forName(“com.mysql.jdbc.Driver”); 插入123456789101112131415161718192021222324252627282930import org.junit.Test;import java.sql.Connection;impor">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MySQL连接最JAVA基础">
+<meta property="og:url" content="http://yoursite.com/2021/12/14/MySQL%E8%BF%9E%E6%8E%A5%E6%9C%80JAVA%E5%9F%BA%E7%A1%80/index.html">
+<meta property="og:site_name" content="Penguin">
+<meta property="og:description" content="8.0驱动Class.forName(“com.mysql.cj.jdbc.Driver”); 5.7驱动Class.forName(“com.mysql.jdbc.Driver”); 插入123456789101112131415161718192021222324252627282930import org.junit.Test;import java.sql.Connection;impor">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-12-14T07:50:36.036Z">
+<meta property="article:modified_time" content="2021-12-14T07:52:50.628Z">
+<meta property="article:author" content="Penguin">
+<meta name="twitter:card" content="summary">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/back.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/MyQie.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Penguin</h5>
+          <a href="mailto:1321931867@qq.com" title="1321931867@qq.com" class="mail">1321931867@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                文章
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/qie53" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">MySQL连接最JAVA基础</div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">MySQL连接最JAVA基础</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2021-12-14T07:50:36.036Z" itemprop="datePublished" class="page-time">
+  2021-12-14
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#8-0驱动"><span class="post-toc-number">1.</span> <span class="post-toc-text">8.0驱动</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#5-7驱动"><span class="post-toc-number">2.</span> <span class="post-toc-text">5.7驱动</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#插入"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">插入</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#查询"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">查询</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-MySQL连接最JAVA基础"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">MySQL连接最JAVA基础</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2021-12-14 15:50:36" datetime="2021-12-14T07:50:36.036Z"  itemprop="datePublished">2021-12-14</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="8-0驱动"><a href="#8-0驱动" class="headerlink" title="8.0驱动"></a>8.0驱动</h1><p>Class.forName(“com.mysql.cj.jdbc.Driver”);</p>
+<h1 id="5-7驱动"><a href="#5-7驱动" class="headerlink" title="5.7驱动"></a>5.7驱动</h1><p>Class.forName(“com.mysql.jdbc.Driver”);</p>
+<h2 id="插入"><a href="#插入" class="headerlink" title="插入"></a>插入</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> org.junit.Test;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.sql.Connection;</span><br><span class="line"><span class="keyword">import</span> java.sql.DriverManager;</span><br><span class="line"><span class="keyword">import</span> java.sql.PreparedStatement;</span><br><span class="line"><span class="keyword">import</span> java.sql.SQLException;</span><br><span class="line"></span><br><span class="line"><span class="comment">//插入</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">test</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">a</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            Class.forName(<span class="string">"com.mysql.cj.jdbc.Driver"</span>);</span><br><span class="line">            Connection con = DriverManager.getConnection(<span class="string">"jdbc:mysql://localhost/data?serverTimezone=UTC&amp;useSSL=false"</span>,<span class="string">"root"</span>,<span class="string">"123123"</span>);</span><br><span class="line">            String url=<span class="string">"insert into news(Title,URL,time,chats)value(?,?,?,?)"</span>;</span><br><span class="line">            PreparedStatement ps = con.prepareStatement(url);</span><br><span class="line">            ps.setObject(<span class="number">1</span>, <span class="string">"我给打了"</span>);</span><br><span class="line">            ps.setObject(<span class="number">2</span>, <span class="string">"https://www.baidu.com"</span>);</span><br><span class="line">            ps.setObject(<span class="number">3</span>, <span class="string">"2020.9.6"</span>);</span><br><span class="line">            ps.setObject(<span class="number">4</span>, <span class="number">100</span>);</span><br><span class="line">            ps.execute();</span><br><span class="line">            System.out.println(<span class="string">"执行成功"</span>);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (ClassNotFoundException e) &#123;</span><br><span class="line">            System.out.println(<span class="string">"加载驱动类失败"</span>);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (SQLException e) &#123;</span><br><span class="line">            System.out.println(<span class="string">"连接数据库失败"</span>);</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="查询"><a href="#查询" class="headerlink" title="查询"></a>查询</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//查询</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">b</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            Class.forName(<span class="string">"com.mysql.cj.jdbc.Driver"</span>);</span><br><span class="line">            Connection con = DriverManager.getConnection(<span class="string">"jdbc:mysql://localhost/data?serverTimezone=UTC&amp;useSSL=false"</span>,<span class="string">"root"</span>,<span class="string">"123123"</span>);</span><br><span class="line">            String sql=<span class="string">"SELECT * FROM news"</span>;</span><br><span class="line">            Statement statement = con.createStatement();</span><br><span class="line">            ResultSet rs = statement.executeQuery(sql);</span><br><span class="line">            <span class="keyword">while</span>(rs.next())&#123;</span><br><span class="line">                String title = rs.getString(<span class="string">"Title"</span>);</span><br><span class="line">                String url = rs.getString(<span class="string">"URL"</span>);</span><br><span class="line">                String time = rs.getString(<span class="string">"time"</span>);</span><br><span class="line">                <span class="keyword">int</span> chats = rs.getInt(<span class="string">"chats"</span>);</span><br><span class="line">                System.out.println(title);</span><br><span class="line">                System.out.println(url);</span><br><span class="line">                System.out.println(time);</span><br><span class="line">                System.out.println(chats);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="keyword">catch</span> (ClassNotFoundException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125; <span class="keyword">catch</span> (SQLException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    Last updated: <time datetime="2021-12-14T07:52:50.628Z" itemprop="dateUpdated">2021-12-14 15:52:50</time>
+</span><br>
+
+
+        
+    </div>
+    
+    <footer>
+        <a href="http://yoursite.com">
+            <img src="/img/MyQie.jpg" alt="Penguin">
+            Penguin
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2021/12/14/MySQL%E8%BF%9E%E6%8E%A5%E6%9C%80JAVA%E5%9F%BA%E7%A1%80/&title=《MySQL连接最JAVA基础》 — Penguin&pic=http://yoursite.com/img/MyQie.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2021/12/14/MySQL%E8%BF%9E%E6%8E%A5%E6%9C%80JAVA%E5%9F%BA%E7%A1%80/&title=《MySQL连接最JAVA基础》 — Penguin&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2021/12/14/MySQL%E8%BF%9E%E6%8E%A5%E6%9C%80JAVA%E5%9F%BA%E7%A1%80/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《MySQL连接最JAVA基础》 — Penguin&url=http://yoursite.com/2021/12/14/MySQL%E8%BF%9E%E6%8E%A5%E6%9C%80JAVA%E5%9F%BA%E7%A1%80/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2021/12/14/MySQL%E8%BF%9E%E6%8E%A5%E6%9C%80JAVA%E5%9F%BA%E7%A1%80/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2021/12/08/JAVA%E5%BE%97%E5%88%B0%E8%87%AA%E5%AE%9A%E4%B9%89%E7%9A%84%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E4%BF%A1%E6%81%AF/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">JAVA得到自定义的配置文件信息</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/MyQie.jpg" alt="打赏二维码">
+        </div>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+            <span>This blog is licensed under a <a rel="license noopener" href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International License</a>.</span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>Penguin &copy; 2019 - 2021</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2021/12/14/MySQL%E8%BF%9E%E6%8E%A5%E6%9C%80JAVA%E5%9F%BA%E7%A1%80/&title=《MySQL连接最JAVA基础》 — Penguin&pic=http://yoursite.com/img/MyQie.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2021/12/14/MySQL%E8%BF%9E%E6%8E%A5%E6%9C%80JAVA%E5%9F%BA%E7%A1%80/&title=《MySQL连接最JAVA基础》 — Penguin&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2021/12/14/MySQL%E8%BF%9E%E6%8E%A5%E6%9C%80JAVA%E5%9F%BA%E7%A1%80/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《MySQL连接最JAVA基础》 — Penguin&url=http://yoursite.com/2021/12/14/MySQL%E8%BF%9E%E6%8E%A5%E6%9C%80JAVA%E5%9F%BA%E7%A1%80/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2021/12/14/MySQL%E8%BF%9E%E6%8E%A5%E6%9C%80JAVA%E5%9F%BA%E7%A1%80/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2021/12/14/MySQL%E8%BF%9E%E6%8E%A5%E6%9C%80JAVA%E5%9F%BA%E7%A1%80/" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>

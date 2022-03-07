@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>springBoot | Penguin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="">
+    <meta name="description" content="配置文件格式yml123456789101112131415161718192021222324#yaml注入方式person  #name  name: 中文   #String  age: 19	#int Integer  boss: true	#boolean  birth: 2019&#x2F;12&#x2F;15		#Date  maps: &amp;#123;key1: value,k2: 23&amp;#125;		#">
+<meta property="og:type" content="article">
+<meta property="og:title" content="springBoot">
+<meta property="og:url" content="http://yoursite.com/2022/03/07/springBoot/index.html">
+<meta property="og:site_name" content="Penguin">
+<meta property="og:description" content="配置文件格式yml123456789101112131415161718192021222324#yaml注入方式person  #name  name: 中文   #String  age: 19	#int Integer  boss: true	#boolean  birth: 2019&#x2F;12&#x2F;15		#Date  maps: &amp;#123;key1: value,k2: 23&amp;#125;		#">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-03-07T14:47:25.905Z">
+<meta property="article:modified_time" content="2022-03-04T12:32:56.248Z">
+<meta property="article:author" content="Penguin">
+<meta name="twitter:card" content="summary">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/back.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/MyQie.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Penguin</h5>
+          <a href="mailto:1321931867@qq.com" title="1321931867@qq.com" class="mail">1321931867@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                文章
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/qie53" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">springBoot</div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">springBoot</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2022-03-07T14:47:25.905Z" itemprop="datePublished" class="page-time">
+  2022-03-07
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#配置文件格式"><span class="post-toc-number">1.</span> <span class="post-toc-text">配置文件格式</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#yml"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">yml</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#properties"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">properties</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#多环境选择激活一个配置文件"><span class="post-toc-number">2.</span> <span class="post-toc-text">多环境选择激活一个配置文件</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#idea快捷键"><span class="post-toc-number">3.</span> <span class="post-toc-text">idea快捷键</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Thymeleaf模板引擎"><span class="post-toc-number">4.</span> <span class="post-toc-text">Thymeleaf模板引擎</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#springBoot整合mybatis"><span class="post-toc-number">5.</span> <span class="post-toc-text">springBoot整合mybatis</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#注解"><span class="post-toc-number">6.</span> <span class="post-toc-text">注解</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-springBoot"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">springBoot</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2022-03-07 22:47:25" datetime="2022-03-07T14:47:25.905Z"  itemprop="datePublished">2022-03-07</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h2 id="配置文件格式"><a href="#配置文件格式" class="headerlink" title="配置文件格式"></a>配置文件格式</h2><h3 id="yml"><a href="#yml" class="headerlink" title="yml"></a>yml</h3><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#yaml注入方式</span></span><br><span class="line"><span class="string">person</span>  <span class="comment">#name</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">中文</span>   <span class="comment">#String</span></span><br><span class="line">  <span class="attr">age:</span> <span class="number">19</span>	<span class="comment">#int Integer</span></span><br><span class="line">  <span class="attr">boss:</span> <span class="literal">true</span>	<span class="comment">#boolean</span></span><br><span class="line">  <span class="attr">birth:</span> <span class="number">2019</span><span class="string">/12/15</span>		<span class="comment">#Date</span></span><br><span class="line">  <span class="attr">maps:</span> <span class="string">&#123;key1:</span> <span class="string">value,k2:</span> <span class="number">23</span><span class="string">&#125;</span>		<span class="comment">#map</span></span><br><span class="line">  <span class="comment">#list容器</span></span><br><span class="line">  <span class="attr">lists:</span>	</span><br><span class="line">    <span class="bullet">-</span> <span class="string">dog</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">pig</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">cat</span></span><br><span class="line">  <span class="comment">#对象</span></span><br><span class="line">  <span class="attr">dog:</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">狗</span></span><br><span class="line">    <span class="attr">age:</span> <span class="number">10</span></span><br><span class="line"><span class="comment">#数组</span></span><br><span class="line"><span class="attr">pet:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">dog</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">cat</span></span><br><span class="line"><span class="attr">colors:</span> <span class="string">[red,blue]</span></span><br><span class="line"><span class="comment">#行内写法</span></span><br><span class="line"><span class="attr">student:</span> <span class="string">&#123;name:</span> <span class="string">name,age=</span> <span class="number">1</span><span class="string">&#125;</span></span><br><span class="line"> <span class="comment">#注意（: ）后面有空格</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="properties"><a href="#properties" class="headerlink" title="properties"></a>properties</h3><figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#properties注入方式</span></span><br><span class="line"><span class="meta">server.port</span>=<span class="string">8080</span></span><br><span class="line"><span class="meta">person.name</span>=<span class="string">中国</span></span><br><span class="line"><span class="meta">person.age</span>=<span class="string">18</span></span><br><span class="line"><span class="meta">person.boss</span>=<span class="string">true</span></span><br><span class="line"><span class="meta">person.birth</span>=<span class="string">2019/12/15</span></span><br><span class="line"><span class="meta">person.maps.k1</span>=<span class="string">v1</span></span><br><span class="line"><span class="meta">person.maps.k2</span>=<span class="string">1234</span></span><br><span class="line"><span class="meta">person.lists</span>=<span class="string">a,b,c,d</span></span><br><span class="line"><span class="meta">person.dog.name</span>=<span class="string">小狗</span></span><br><span class="line"><span class="meta">person.dog.age</span>=<span class="string">19</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="多环境选择激活一个配置文件"><a href="#多环境选择激活一个配置文件" class="headerlink" title="多环境选择激活一个配置文件"></a>多环境选择激活一个配置文件</h2><ol>
+<li><p>在resource中创建application-test.yml</p>
+</li>
+<li><p>在application.yml中选择环境 配置选择激活的文件</p>
+<ul>
+<li><pre><code class="yml"><span class="attr">spring:</span>
+  <span class="attr">profiles:</span>
+    <span class="attr">active:</span> <span class="string">test</span>
+<span class="string"><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">   </span><br><span class="line">3. 也可以在配置文件中使用---划分配置</span><br><span class="line"></span><br><span class="line">   - &#96;&#96;&#96;yml</span><br><span class="line">     cat:</span><br><span class="line">       name: 1321@qq.com</span><br><span class="line">       age: 1</span><br><span class="line">       weight: 14.0</span><br><span class="line">     </span><br><span class="line">     spring:</span><br><span class="line">       profiles:</span><br><span class="line">         active: ddd</span><br><span class="line">     ---</span><br><span class="line">     server:</span><br><span class="line">          port: 9090</span><br><span class="line">     spring:</span><br><span class="line">       profiles: ddd</span><br><span class="line">     </span><br><span class="line">     ---</span><br><span class="line">     server:</span><br><span class="line">       port: 1002</span><br><span class="line">     spring:</span><br><span class="line">       profiles: ccc</span><br></pre></td></tr></table></figure></span>
+</code></pre>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="idea快捷键"><a href="#idea快捷键" class="headerlink" title="idea快捷键"></a>idea快捷键</h2><p>Alt+7调出类的所有方法</p>
+<p>ctrl+R全局修改</p>
+<h2 id="Thymeleaf模板引擎"><a href="#Thymeleaf模板引擎" class="headerlink" title="Thymeleaf模板引擎"></a>Thymeleaf模板引擎</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--使用Thymeleaf必须加上--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span> <span class="attr">xmlns:th</span>=<span class="string">"http://www.thymeleaf.org"</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--单个数据--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">th:text</span>=<span class="string">"$&#123;msg&#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--数据便利展示--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">th:each</span>=<span class="string">"user:$&#123;users&#125;"</span> <span class="attr">th:text</span>=<span class="string">"$&#123;user&#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--对象能点出属性--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">th:text</span>=<span class="string">"$&#123;cat.name&#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="springBoot整合mybatis"><a href="#springBoot整合mybatis" class="headerlink" title="springBoot整合mybatis"></a>springBoot整合mybatis</h2><ol>
+<li><p>创建mapper.UserMapper.interface</p>
+<ol>
+<li><pre><code class="java"><span class="keyword">package</span> com.edu.penguin.mapper;
+
+<span class="keyword">import</span> com.edu.penguin.pojo.User;
+<span class="keyword">import</span> org.apache.ibatis.annotations.Mapper;
+<span class="keyword">import</span> org.springframework.stereotype.Repository;
+
+<span class="keyword">import</span> java.util.List;
+
+<span class="meta">@Mapper</span>
+<span class="meta">@Repository</span>
+<span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">UserMapper</span> </span>{
+    <span class="function">List&lt;User&gt; <span class="title">selectAllList</span><span class="params">()</span></span>;
+
+    <span class="function">User <span class="title">select</span><span class="params">(Integer id)</span></span>;
+
+    <span class="function"><span class="keyword">int</span> <span class="title">deleteUser</span><span class="params">(Integer id)</span></span>;
+
+    <span class="function"><span class="keyword">int</span> <span class="title">addUser</span><span class="params">(User user)</span></span>;
+
+    <span class="function"><span class="keyword">int</span> <span class="title">updateUser</span><span class="params">(User user)</span></span>;
+}
+
+&lt;!--￼<span class="number">4</span>--&gt;</code></pre>
+</li>
+</ol>
+</li>
+<li><p>在yml中配置配置位置</p>
+<ol>
+<li><pre><code class="yml"><span class="attr">mybatis:</span>
+  <span class="attr">type-aliases-package:</span> <span class="string">com.edu.penguin.mapper.UserMapper</span>
+  <span class="attr">mapper-locations:</span> <span class="string">classpath:mybatis/mapper/*.xml</span>
+<span class="string"><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">4. 使用</span><br><span class="line"></span><br><span class="line">   1. &#96;&#96;&#96;java</span><br><span class="line">      @Autowired</span><br><span class="line">      private UserMapper userMapper;</span><br><span class="line">      @GetMapping(&quot;&#x2F;b&#x2F;&#123;id&#125;&quot;)</span><br><span class="line">      public User select(@PathVariable(&quot;id&quot;) Integer id)&#123;</span><br><span class="line">          return userMapper.select(id);</span><br><span class="line">      &#125;</span><br></pre></td></tr></table></figure></span>
+</code></pre>
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="注解"><a href="#注解" class="headerlink" title="注解"></a>注解</h2><ul>
+<li><p>@Component：组件放在类上，说明这个类被spring管理了，就是bean，用小写类访问（下面这三个注解和这个注解一样，都表示装配Bean，只是为了表示）写在pojo层</p>
+<ul>
+<li>@Repository：dao层</li>
+<li>@Service：service层</li>
+<li>@Controller：controller层</li>
+</ul>
+</li>
+<li><p>@Value：用法如下直接进行注入赋值</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Value</span>(<span class="string">"name"</span>)</span><br><span class="line"><span class="keyword">private</span> String name;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>@Autowired：自动装配，通过类型，名字</p>
+<ul>
+<li>如果不能唯一自动装配，则需要通过@Qualifier(value = “name”)</li>
+</ul>
+</li>
+<li><p>@ConfigurationProperties：如果你使用properties或yml进行注入就需要在想要注入的类上面写上  @ConfigurationProperties(prefix=”cat”)  prefix是指定配置文件中的对应的注入</p>
+</li>
+<li><p>@PropertySource：加载指定的配置文件 用法</p>
+<ul>
+<li>@PropertySource(value = “classpath:文件名会从resource出发”)</li>
+</ul>
+</li>
+<li><p>@Validated：JSR303校验 进行各种校验要导入包</p>
+<ul>
+<li><pre><code class="xml"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span>
+    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span>
+    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-validation<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span>
+<span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></code></pre>
+</li>
+<li><p>@Email()</p>
+</li>
+<li><p>@NotNull()：注入不能为空</p>
+</li>
+<li><p>@Max(value = 100,message = “最大不超过100，提示消息”)：最大不超过100</p>
+</li>
+<li><p>@Min(0)：最小不低于0</p>
+</li>
+</ul>
+</li>
+<li><p>@responseBody：视图解析器不生效</p>
+</li>
+<li><p>@RestController：不解析视图的controller</p>
+</li>
+</ul>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    Last updated: <time datetime="2022-03-04T12:32:56.248Z" itemprop="dateUpdated">2022-03-04 20:32:56</time>
+</span><br>
+
+
+        
+    </div>
+    
+    <footer>
+        <a href="http://yoursite.com">
+            <img src="/img/MyQie.jpg" alt="Penguin">
+            Penguin
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2022/03/07/springBoot/&title=《springBoot》 — Penguin&pic=http://yoursite.com/img/MyQie.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2022/03/07/springBoot/&title=《springBoot》 — Penguin&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2022/03/07/springBoot/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《springBoot》 — Penguin&url=http://yoursite.com/2022/03/07/springBoot/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2022/03/07/springBoot/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2022/03/07/android/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">android</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/MyQie.jpg" alt="打赏二维码">
+        </div>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+            <span>This blog is licensed under a <a rel="license noopener" href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International License</a>.</span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>Penguin &copy; 2019 - 2022</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2022/03/07/springBoot/&title=《springBoot》 — Penguin&pic=http://yoursite.com/img/MyQie.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2022/03/07/springBoot/&title=《springBoot》 — Penguin&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2022/03/07/springBoot/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《springBoot》 — Penguin&url=http://yoursite.com/2022/03/07/springBoot/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2022/03/07/springBoot/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2022/03/07/springBoot/" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>

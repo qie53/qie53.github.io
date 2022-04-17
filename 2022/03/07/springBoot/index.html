@@ -29,7 +29,7 @@
 <meta property="og:description" content="配置文件格式yml123456789101112131415161718192021222324#yaml注入方式person  #name  name: 中文   #String  age: 19	#int Integer  boss: true	#boolean  birth: 2019&#x2F;12&#x2F;15		#Date  maps: &amp;#123;key1: value,k2: 23&amp;#125;		#">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-03-07T14:47:25.905Z">
-<meta property="article:modified_time" content="2022-03-04T12:32:56.248Z">
+<meta property="article:modified_time" content="2022-04-17T07:49:43.556Z">
 <meta property="article:author" content="Penguin">
 <meta name="twitter:card" content="summary">
     
@@ -131,7 +131,7 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#配置文件格式"><span class="post-toc-number">1.</span> <span class="post-toc-text">配置文件格式</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#yml"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">yml</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#properties"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">properties</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#多环境选择激活一个配置文件"><span class="post-toc-number">2.</span> <span class="post-toc-text">多环境选择激活一个配置文件</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#idea快捷键"><span class="post-toc-number">3.</span> <span class="post-toc-text">idea快捷键</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Thymeleaf模板引擎"><span class="post-toc-number">4.</span> <span class="post-toc-text">Thymeleaf模板引擎</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#springBoot整合mybatis"><span class="post-toc-number">5.</span> <span class="post-toc-text">springBoot整合mybatis</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#注解"><span class="post-toc-number">6.</span> <span class="post-toc-text">注解</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#配置文件格式"><span class="post-toc-number">1.</span> <span class="post-toc-text">配置文件格式</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#yml"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">yml</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#properties"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">properties</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#多环境选择激活一个配置文件"><span class="post-toc-number">2.</span> <span class="post-toc-text">多环境选择激活一个配置文件</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#idea快捷键"><span class="post-toc-number">3.</span> <span class="post-toc-text">idea快捷键</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Thymeleaf模板引擎"><span class="post-toc-number">4.</span> <span class="post-toc-text">Thymeleaf模板引擎</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#springBoot整合mybatis"><span class="post-toc-number">5.</span> <span class="post-toc-text">springBoot整合mybatis</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#springBoot整合shiro"><span class="post-toc-number">6.</span> <span class="post-toc-text">springBoot整合shiro</span></a></li></ol>
         </nav>
     </aside>
 
@@ -178,56 +178,101 @@
 <h2 id="Thymeleaf模板引擎"><a href="#Thymeleaf模板引擎" class="headerlink" title="Thymeleaf模板引擎"></a>Thymeleaf模板引擎</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--使用Thymeleaf必须加上--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span> <span class="attr">xmlns:th</span>=<span class="string">"http://www.thymeleaf.org"</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--单个数据--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">th:text</span>=<span class="string">"$&#123;msg&#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--数据便利展示--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">th:each</span>=<span class="string">"user:$&#123;users&#125;"</span> <span class="attr">th:text</span>=<span class="string">"$&#123;user&#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--对象能点出属性--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">th:text</span>=<span class="string">"$&#123;cat.name&#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <h2 id="springBoot整合mybatis"><a href="#springBoot整合mybatis" class="headerlink" title="springBoot整合mybatis"></a>springBoot整合mybatis</h2><ol>
-<li><p>创建mapper.UserMapper.interface</p>
+<li>创建mapper.UserMapper.interface</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.edu.penguin.mapper;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.edu.penguin.pojo.User;</span><br><span class="line"><span class="keyword">import</span> org.apache.ibatis.annotations.Mapper;</span><br><span class="line"><span class="keyword">import</span> org.springframework.stereotype.Repository;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Mapper</span></span><br><span class="line"><span class="meta">@Repository</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">UserMapper</span> </span>&#123;</span><br><span class="line">    <span class="function">List&lt;User&gt; <span class="title">selectAllList</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="function">User <span class="title">select</span><span class="params">(Integer id)</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">deleteUser</span><span class="params">(Integer id)</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">addUser</span><span class="params">(User user)</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">updateUser</span><span class="params">(User user)</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>在resource下面创建mybatis文件夹再次创建mapper文件夹再创建UserMapper.xml</li>
+</ol>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version="1.0" encoding="UTF-8" ?&gt;</span></span><br><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">mapper</span></span></span><br><span class="line"><span class="meta">        <span class="meta-keyword">PUBLIC</span> <span class="meta-string">"-//mybatis.org//DTD Mapper 3.0//EN"</span></span></span><br><span class="line"><span class="meta">        <span class="meta-string">"http://mybatis.org/dtd/mybatis-3-mapper.dtd"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">mapper</span> <span class="attr">namespace</span>=<span class="string">"com.edu.penguin.mapper.UserMapper"</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--id是上面接口的方法名--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">"selectAllList"</span> <span class="attr">resultType</span>=<span class="string">"com.edu.penguin.pojo.User"</span> <span class="attr">useCache</span>=<span class="string">"true"</span>&gt;</span></span><br><span class="line">        select * from mybatisuser</span><br><span class="line">    <span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">"select"</span> <span class="attr">resultType</span>=<span class="string">"com.edu.penguin.pojo.User"</span>&gt;</span></span><br><span class="line">        select * from mybatisuser where id=#&#123;id&#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">delete</span> <span class="attr">id</span>=<span class="string">"deleteUser"</span> <span class="attr">parameterType</span>=<span class="string">"int"</span>&gt;</span></span><br><span class="line">        delete from mybatisuser where id=#&#123;id&#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">delete</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">insert</span> <span class="attr">id</span>=<span class="string">"addUser"</span> <span class="attr">parameterType</span>=<span class="string">"com.edu.penguin.pojo.User"</span>&gt;</span></span><br><span class="line">        insert into mybatisuser(id.name,pwd) values(#&#123;id&#125;,#&#123;name&#125;,#&#123;pwd&#125;)</span><br><span class="line">    <span class="tag">&lt;/<span class="name">insert</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">update</span> <span class="attr">id</span>=<span class="string">"updateUser"</span> <span class="attr">parameterType</span>=<span class="string">"com.edu.penguin.pojo.User"</span>&gt;</span></span><br><span class="line">        update mybatisuser set name = #&#123;name&#125;,pwd=#&#123;pwd&#125; where id=#&#123;id&#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">update</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">mapper</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>在yml中配置配置位置</li>
+</ol>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">mybatis:</span></span><br><span class="line">  <span class="attr">type-aliases-package:</span> <span class="string">com.edu.penguin.mapper.UserMapper</span></span><br><span class="line">  <span class="attr">mapper-locations:</span> <span class="string">classpath:mybatis/mapper/*.xml</span></span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li><p>使用</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Autowired</span></span><br><span class="line"><span class="keyword">private</span> UserMapper userMapper;</span><br><span class="line"><span class="meta">@GetMapping</span>(<span class="string">"/b/&#123;id&#125;"</span>)</span><br><span class="line"><span class="function"><span class="keyword">public</span> User <span class="title">select</span><span class="params">(@PathVariable(<span class="string">"id"</span>)</span> Integer id)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> userMapper.select(id);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h2 id="springBoot整合shiro"><a href="#springBoot整合shiro" class="headerlink" title="springBoot整合shiro"></a>springBoot整合shiro</h2><ol>
+<li><p>需要的jar包</p>
 <ol>
-<li><pre><code class="java"><span class="keyword">package</span> com.edu.penguin.mapper;
+<li><pre><code class="xml">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span>
+            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.shiro<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span>
+            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>shiro-spring-boot-starter<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span>
+            <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.8.0<span class="tag">&lt;/<span class="name">version</span>&gt;</span>
+        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span>
+<span class="comment"><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">2. 写realm  注解掉的的都是后面加的</span><br><span class="line"></span><br><span class="line">   1. &#96;&#96;&#96;java</span><br><span class="line">      package com.edu.penguin.shirospringboot.config;</span><br><span class="line">      </span><br><span class="line">      import com.edu.penguin.shirospringboot.pojo.User;</span><br><span class="line">      import com.edu.penguin.shirospringboot.service.UserServiceImpl;</span><br><span class="line">      import org.apache.shiro.authc.*;</span><br><span class="line">      import org.apache.shiro.authz.AuthorizationInfo;</span><br><span class="line">      import org.apache.shiro.realm.AuthorizingRealm;</span><br><span class="line">      import org.apache.shiro.subject.PrincipalCollection;</span><br><span class="line">      import org.springframework.beans.factory.annotation.Autowired;</span><br><span class="line">      </span><br><span class="line">      public class UserRealm extends AuthorizingRealm &#123;</span><br><span class="line">      </span><br><span class="line">          @Autowired</span><br><span class="line">          UserServiceImpl userService;</span><br><span class="line">      </span><br><span class="line">          @Override</span><br><span class="line">          protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principalCollection) &#123;</span><br><span class="line">              System.out.println(&quot;使用了授权：doGetAuthorizationInfo&quot;);</span><br><span class="line">              return null;</span><br><span class="line">          &#125;</span><br><span class="line">      </span><br><span class="line">          @Override</span><br><span class="line">          protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken token) throws AuthenticationException &#123;</span><br><span class="line">              System.out.println(&quot;使用了认证：doGetAuthenticationInfo&quot;);</span><br><span class="line">      </span><br><span class="line">      </span><br><span class="line">      &#x2F;&#x2F;        UsernamePasswordToken userToken &#x3D; (UsernamePasswordToken)token;</span><br><span class="line">      &#x2F;&#x2F;        User user &#x3D; userService.selectByName(userToken.getUsername());</span><br><span class="line">      &#x2F;&#x2F;</span><br><span class="line">      &#x2F;&#x2F;        if(user&#x3D;&#x3D;null)&#123;</span><br><span class="line">      &#x2F;&#x2F;            &#x2F;&#x2F;如果return null就是用户不存在</span><br><span class="line">      &#x2F;&#x2F;            return null;</span><br><span class="line">      &#x2F;&#x2F;        &#125;</span><br><span class="line">      &#x2F;&#x2F;</span><br><span class="line">      &#x2F;&#x2F;        return new SimpleAuthenticationInfo(&quot;&quot;,user.getPwd(),&quot;&quot;);</span><br><span class="line">              return null;</span><br><span class="line">          &#125;</span><br><span class="line">      &#125;</span><br></pre></td></tr></table></figure></span></code></pre>
+</li>
+</ol>
+</li>
+<li><p>编写shiroConfig</p>
+<ol>
+<li><pre><code class="java"><span class="keyword">package</span> com.edu.penguin.shirospringboot.config;
 
-<span class="keyword">import</span> com.edu.penguin.pojo.User;
-<span class="keyword">import</span> org.apache.ibatis.annotations.Mapper;
-<span class="keyword">import</span> org.springframework.stereotype.Repository;
+<span class="keyword">import</span> org.apache.shiro.spring.web.ShiroFilterFactoryBean;
+<span class="keyword">import</span> org.apache.shiro.web.mgt.DefaultWebSecurityManager;
+<span class="keyword">import</span> org.springframework.beans.factory.annotation.Qualifier;
+<span class="keyword">import</span> org.springframework.context.annotation.Bean;
+<span class="keyword">import</span> org.springframework.context.annotation.Configuration;
 
-<span class="keyword">import</span> java.util.List;
+<span class="keyword">import</span> java.util.LinkedHashMap;
+<span class="keyword">import</span> java.util.Map;
 
-<span class="meta">@Mapper</span>
-<span class="meta">@Repository</span>
-<span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">UserMapper</span> </span>{
-    <span class="function">List&lt;User&gt; <span class="title">selectAllList</span><span class="params">()</span></span>;
+<span class="meta">@Configuration</span>
+<span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ShiroConfig</span></span>{
 
-    <span class="function">User <span class="title">select</span><span class="params">(Integer id)</span></span>;
+    <span class="comment">//创建realm 对象 1</span>
+    <span class="meta">@Bean</span>(name=<span class="string">"userRealm"</span>)
+    <span class="function"><span class="keyword">public</span> UserRealm <span class="title">userRealm</span><span class="params">()</span></span>{
+        <span class="keyword">return</span> <span class="keyword">new</span> UserRealm();
+    }
 
-    <span class="function"><span class="keyword">int</span> <span class="title">deleteUser</span><span class="params">(Integer id)</span></span>;
+    <span class="comment">//DefaultWebSecurityMangager 2</span>
+    <span class="meta">@Bean</span>(name=<span class="string">"defaultWebSecurityManager"</span>)
+    <span class="function"><span class="keyword">public</span> DefaultWebSecurityManager <span class="title">defaultWebSecurityManager</span><span class="params">(@Qualifier(<span class="string">"userRealm"</span>)</span> UserRealm userRealm)</span>{
+        DefaultWebSecurityManager securityManager = <span class="keyword">new</span> DefaultWebSecurityManager();
+        securityManager.setRealm(userRealm);
+        <span class="keyword">return</span> securityManager;
+    }
 
-    <span class="function"><span class="keyword">int</span> <span class="title">addUser</span><span class="params">(User user)</span></span>;
+    <span class="comment">//shiroFilterFactoryBean 3</span>
+    <span class="meta">@Bean</span>(name=<span class="string">"shiroFilterFactoryBean"</span>)
+    <span class="function"><span class="keyword">public</span> ShiroFilterFactoryBean <span class="title">shiroFilterFactoryBean</span><span class="params">(@Qualifier(<span class="string">"defaultWebSecurityManager"</span>)</span> DefaultWebSecurityManager defaultWebSecurityManager)</span>{
+        ShiroFilterFactoryBean bean= <span class="keyword">new</span> ShiroFilterFactoryBean();
+        bean.setSecurityManager(defaultWebSecurityManager);
 
-    <span class="function"><span class="keyword">int</span> <span class="title">updateUser</span><span class="params">(User user)</span></span>;
+        <span class="comment">//设置登录页面</span>
+<span class="comment">//        bean.setLoginUrl("/login");</span>
+<span class="comment">//</span>
+<span class="comment">//        Map&lt;String, String&gt; filterMap = new LinkedHashMap&lt;&gt;();</span>
+<span class="comment">//        /**</span>
+<span class="comment">//         * anon 无需认证即可访问</span>
+<span class="comment">//         * authc 必须认证才能使用</span>
+<span class="comment">//         * user 用户拦截器，用户已经身份验证/记住我登录的都可</span>
+<span class="comment">//         * perms 拥有对某个资源的权限才能访问</span>
+<span class="comment">//         * role 拥有某个角色权限才能访问</span>
+<span class="comment">//         * */</span>
+<span class="comment">//        filterMap.put("/add","anon");</span>
+<span class="comment">//        filterMap.put("/update","authc");</span>
+<span class="comment">//</span>
+<span class="comment">//        //添加shiro的内置过滤器</span>
+<span class="comment">//        bean.setFilterChainDefinitionMap(filterMap);</span>
+
+        <span class="keyword">return</span> bean;
+    }
 }
 
-&lt;!--￼<span class="number">4</span>--&gt;</code></pre>
-</li>
-</ol>
-</li>
-<li><p>在yml中配置配置位置</p>
-<ol>
-<li><pre><code class="yml"><span class="attr">mybatis:</span>
-  <span class="attr">type-aliases-package:</span> <span class="string">com.edu.penguin.mapper.UserMapper</span>
-  <span class="attr">mapper-locations:</span> <span class="string">classpath:mybatis/mapper/*.xml</span>
-<span class="string"><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">4. 使用</span><br><span class="line"></span><br><span class="line">   1. &#96;&#96;&#96;java</span><br><span class="line">      @Autowired</span><br><span class="line">      private UserMapper userMapper;</span><br><span class="line">      @GetMapping(&quot;&#x2F;b&#x2F;&#123;id&#125;&quot;)</span><br><span class="line">      public User select(@PathVariable(&quot;id&quot;) Integer id)&#123;</span><br><span class="line">          return userMapper.select(id);</span><br><span class="line">      &#125;</span><br></pre></td></tr></table></figure></span>
-</code></pre>
+&lt;!--￼<span class="number">9</span>--&gt;</code></pre>
 </li>
 </ol>
 </li>
 </ol>
-<h2 id="注解"><a href="#注解" class="headerlink" title="注解"></a>注解</h2><ul>
-<li><p>@Component：组件放在类上，说明这个类被spring管理了，就是bean，用小写类访问（下面这三个注解和这个注解一样，都表示装配Bean，只是为了表示）写在pojo层</p>
 <ul>
-<li>@Repository：dao层</li>
-<li>@Service：service层</li>
-<li>@Controller：controller层</li>
-</ul>
-</li>
-<li><p>@Value：用法如下直接进行注入赋值</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Value</span>(<span class="string">"name"</span>)</span><br><span class="line"><span class="keyword">private</span> String name;</span><br></pre></td></tr></table></figure>
-</li>
 <li><p>@Autowired：自动装配，通过类型，名字</p>
 <ul>
 <li>如果不能唯一自动装配，则需要通过@Qualifier(value = “name”)</li>
@@ -270,7 +315,7 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2022-03-04T12:32:56.248Z" itemprop="dateUpdated">2022-03-04 20:32:56</time>
+    Last updated: <time datetime="2022-04-17T07:49:43.556Z" itemprop="dateUpdated">2022-04-17 15:49:43</time>
 </span><br>
 
 

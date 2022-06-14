@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>计算机组成原理 | Penguin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="">
+    <meta name="description" content="计算机性能指标：机器字长、存储容量、运算速度  冯·诺依曼： 采用二进制形式表示数据和指令，由操作码，地址码组成。 存储程序，控制程序 按顺序执行指令，程序分支由转移指令实现 由运算器、控制球、存储器、输入设备、输出设备 以运算器为中心  （现在是以存储器为中心）   计算机软件系统计算机软件一般分为两大类：  系统软件 应用软件  操作系统：向上为用户提供服务，向下管理硬件 程序设计语言一般分为">
+<meta property="og:type" content="article">
+<meta property="og:title" content="计算机组成原理">
+<meta property="og:url" content="http://yoursite.com/2022/06/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/index.html">
+<meta property="og:site_name" content="Penguin">
+<meta property="og:description" content="计算机性能指标：机器字长、存储容量、运算速度  冯·诺依曼： 采用二进制形式表示数据和指令，由操作码，地址码组成。 存储程序，控制程序 按顺序执行指令，程序分支由转移指令实现 由运算器、控制球、存储器、输入设备、输出设备 以运算器为中心  （现在是以存储器为中心）   计算机软件系统计算机软件一般分为两大类：  系统软件 应用软件  操作系统：向上为用户提供服务，向下管理硬件 程序设计语言一般分为">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-06-13T10:33:54.832Z">
+<meta property="article:modified_time" content="2022-06-14T08:37:30.364Z">
+<meta property="article:author" content="Penguin">
+<meta name="twitter:card" content="summary">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/back.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/MyQie.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Penguin</h5>
+          <a href="mailto:1321931867@qq.com" title="1321931867@qq.com" class="mail">1321931867@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                文章
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/qie53" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">计算机组成原理</div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">计算机组成原理</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2022-06-13T10:33:54.832Z" itemprop="datePublished" class="page-time">
+  2022-06-13
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#计算机性能指标："><span class="post-toc-number">1.</span> <span class="post-toc-text">计算机性能指标：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#冯·诺依曼："><span class="post-toc-number">2.</span> <span class="post-toc-text">冯·诺依曼：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#计算机软件系统"><span class="post-toc-number">3.</span> <span class="post-toc-text">计算机软件系统</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#数值数据的表示"><span class="post-toc-number">4.</span> <span class="post-toc-text">数值数据的表示</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#奇偶校验码："><span class="post-toc-number">5.</span> <span class="post-toc-text">奇偶校验码：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#替换算法："><span class="post-toc-number">6.</span> <span class="post-toc-text">替换算法：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#写策略："><span class="post-toc-number">7.</span> <span class="post-toc-text">写策略：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#数据寻址（10种）："><span class="post-toc-number">8.</span> <span class="post-toc-text">数据寻址（10种）：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#CISC（复杂指令系统）："><span class="post-toc-number">9.</span> <span class="post-toc-text">CISC（复杂指令系统）：</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#存储器"><span class="post-toc-number"></span> <span class="post-toc-text">存储器</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#存储器按照存取方式分类："><span class="post-toc-number">1.</span> <span class="post-toc-text">存储器按照存取方式分类：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#衡量存储器性能的指标："><span class="post-toc-number">2.</span> <span class="post-toc-text">衡量存储器性能的指标：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#随机读写存储器"><span class="post-toc-number">3.</span> <span class="post-toc-text">随机读写存储器</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#DRAM刷新"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">DRAM刷新</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#只读存储器"><span class="post-toc-number">4.</span> <span class="post-toc-text">只读存储器</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-计算机组成原理"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">计算机组成原理</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2022-06-13 18:33:54" datetime="2022-06-13T10:33:54.832Z"  itemprop="datePublished">2022-06-13</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h3 id="计算机性能指标："><a href="#计算机性能指标：" class="headerlink" title="计算机性能指标："></a>计算机性能指标：</h3><p>机器字长、存储容量、运算速度</p>
+<hr>
+<h3 id="冯·诺依曼："><a href="#冯·诺依曼：" class="headerlink" title="冯·诺依曼："></a>冯·诺依曼：</h3><ul>
+<li>采用二进制形式表示数据和指令，由操作码，地址码组成。</li>
+<li>存储程序，控制程序</li>
+<li>按顺序执行指令，程序分支由转移指令实现</li>
+<li>由运算器、控制球、存储器、输入设备、输出设备</li>
+<li>以运算器为中心  （现在是以存储器为中心）</li>
+</ul>
+<hr>
+<h3 id="计算机软件系统"><a href="#计算机软件系统" class="headerlink" title="计算机软件系统"></a>计算机软件系统</h3><p>计算机软件一般分为两大类：</p>
+<ul>
+<li>系统软件</li>
+<li>应用软件</li>
+</ul>
+<p><strong>操作系统</strong>：向上为用户提供服务，向下管理硬件</p>
+<p><strong>程序设计语言一般分为三类</strong>：机器语言、汇编语言、高级语言</p>
+<p><strong>数据库管理系统</strong>：数据库+数据库管理软件</p>
+<hr>
+<h3 id="数值数据的表示"><a href="#数值数据的表示" class="headerlink" title="数值数据的表示"></a>数值数据的表示</h3><p>在计算机中参与运算的数值有两种：无符号数据，带符号数据</p>
+<p>小数点表示方法：定点表示法、浮点表示法（重点）</p>
+<h3 id="奇偶校验码："><a href="#奇偶校验码：" class="headerlink" title="奇偶校验码："></a>奇偶校验码：</h3><p>案例：字符‘A‘的ASCII码为41H（0100 0001）</p>
+<ul>
+<li>奇校验码：C1H（1100 0001）</li>
+<li>偶校验码：41H（0100 0001）</li>
+</ul>
+<h3 id="替换算法："><a href="#替换算法：" class="headerlink" title="替换算法："></a>替换算法：</h3><ul>
+<li>随机替换算法</li>
+<li>先进先出替换算法</li>
+<li>最近最少使用算法</li>
+</ul>
+<h3 id="写策略："><a href="#写策略：" class="headerlink" title="写策略："></a>写策略：</h3><ul>
+<li>写贯穿策略</li>
+<li>写回策略</li>
+</ul>
+<h3 id="数据寻址（10种）："><a href="#数据寻址（10种）：" class="headerlink" title="数据寻址（10种）："></a>数据寻址（10种）：</h3><ul>
+<li>立即寻址</li>
+<li>直接寻址</li>
+<li>间接寻址</li>
+<li>寄存器寻址</li>
+<li>寄存器间接寻址</li>
+<li>变址寻址</li>
+<li>基址寻址</li>
+<li>基址变址寻址</li>
+<li>相对寻址</li>
+<li>堆栈寻址</li>
+</ul>
+<h3 id="CISC（复杂指令系统）："><a href="#CISC（复杂指令系统）：" class="headerlink" title="CISC（复杂指令系统）："></a>CISC（复杂指令系统）：</h3><p>指令数量多，可变长格式，支出多种寻址方式，实现方式是使用微程序控制技术。译码时间长，执行效率低。</p>
+<h2 id="存储器"><a href="#存储器" class="headerlink" title="存储器"></a>存储器</h2><h3 id="存储器按照存取方式分类："><a href="#存储器按照存取方式分类：" class="headerlink" title="存储器按照存取方式分类："></a>存储器按照存取方式分类：</h3><ul>
+<li>随机读写存储器</li>
+<li>只读存储器</li>
+<li>相联存储器</li>
+<li>顺序存储器</li>
+<li>直接存取存储器</li>
+</ul>
+<h3 id="衡量存储器性能的指标："><a href="#衡量存储器性能的指标：" class="headerlink" title="衡量存储器性能的指标："></a>衡量存储器性能的指标：</h3><ul>
+<li>存储容量</li>
+<li>速度</li>
+<li>价格</li>
+<li>额外：可靠性、访问方式、信息存储的永久性</li>
+</ul>
+<h3 id="随机读写存储器"><a href="#随机读写存储器" class="headerlink" title="随机读写存储器"></a>随机读写存储器</h3><ul>
+<li>静态MOS存储器（SRAM）</li>
+<li>动态MOS存储器（DRAM）</li>
+</ul>
+<h4 id="DRAM刷新"><a href="#DRAM刷新" class="headerlink" title="DRAM刷新"></a>DRAM刷新</h4><ul>
+<li>集中式刷新：会存在死区即禁止读/写</li>
+<li>分散式刷新</li>
+<li>异步式刷新：集中式+分散式</li>
+</ul>
+<h3 id="只读存储器"><a href="#只读存储器" class="headerlink" title="只读存储器"></a>只读存储器</h3><ul>
+<li>掩模型只读存储器（MROM）</li>
+<li>可编程只读存储器（PROM）</li>
+<li>可多次编程的只读存储器（EPROM、E<sup>2</sup>PROM）</li>
+<li>闪速存储器（Flash Memory）</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>存储器</th>
+<th>类别</th>
+<th>擦除方式</th>
+<th>能否单字节修改</th>
+<th>写机制</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>MROM</td>
+<td>只读</td>
+<td>不允许</td>
+<td>否</td>
+<td>掩模位写</td>
+</tr>
+<tr>
+<td>PROM</td>
+<td>写一次读多次</td>
+<td>不允许</td>
+<td>否</td>
+<td>电信号</td>
+</tr>
+<tr>
+<td>RPROM</td>
+<td>写多次读多次</td>
+<td>紫外线</td>
+<td>否</td>
+<td>电信号</td>
+</tr>
+<tr>
+<td>E<sup>2</sup>PROM</td>
+<td>写多次读多次</td>
+<td>电擦除</td>
+<td>是</td>
+<td>电信号</td>
+</tr>
+<tr>
+<td>Flash Memory</td>
+<td>写多次读多次</td>
+<td>电擦除</td>
+<td>否</td>
+<td>电信号</td>
+</tr>
+</tbody></table>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    Last updated: <time datetime="2022-06-14T08:37:30.364Z" itemprop="dateUpdated">2022-06-14 16:37:30</time>
+</span><br>
+
+
+        
+    </div>
+    
+    <footer>
+        <a href="http://yoursite.com">
+            <img src="/img/MyQie.jpg" alt="Penguin">
+            Penguin
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2022/06/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/&title=《计算机组成原理》 — Penguin&pic=http://yoursite.com/img/MyQie.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2022/06/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/&title=《计算机组成原理》 — Penguin&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2022/06/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《计算机组成原理》 — Penguin&url=http://yoursite.com/2022/06/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2022/06/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2022/06/13/2022.6.13%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">2022.6.13数据结构</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/MyQie.jpg" alt="打赏二维码">
+        </div>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+            <span>This blog is licensed under a <a rel="license noopener" href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International License</a>.</span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>Penguin &copy; 2019 - 2022</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2022/06/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/&title=《计算机组成原理》 — Penguin&pic=http://yoursite.com/img/MyQie.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2022/06/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/&title=《计算机组成原理》 — Penguin&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2022/06/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《计算机组成原理》 — Penguin&url=http://yoursite.com/2022/06/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2022/06/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2022/06/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>

@@ -29,7 +29,7 @@
 <meta property="og:description" content="操作系统操作系统引论操作系统是什么？操作系统是配置在计算机硬件上的第一层软件，是对硬件系统的首次扩充。其他之上的应用软件都直接依赖于操作系统的支持，取得它所提供的服务。作为用户与计算机硬件的接口。 操作系统的目标 方便性 有效性 可扩展性 开放性  操作系统的发展过程 人工操作方式 脱机输入&#x2F;输出方式 单道批处理系统 多道批处理系统 优缺点 资源利用率高 系统吞吐量大 平均周转时间长 无交互能力">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-09-12T11:25:28.832Z">
-<meta property="article:modified_time" content="2022-10-11T05:22:28.655Z">
+<meta property="article:modified_time" content="2022-10-17T06:34:21.694Z">
 <meta property="article:author" content="Penguin">
 <meta name="twitter:card" content="summary">
     
@@ -131,7 +131,7 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#操作系统"><span class="post-toc-number">1.</span> <span class="post-toc-text">操作系统</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#操作系统引论"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">操作系统引论</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#操作系统是什么？"><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">操作系统是什么？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#操作系统的目标"><span class="post-toc-number">1.1.2.</span> <span class="post-toc-text">操作系统的目标</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#操作系统的发展过程"><span class="post-toc-number">1.1.3.</span> <span class="post-toc-text">操作系统的发展过程</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#操作系统基本特性"><span class="post-toc-number">1.1.4.</span> <span class="post-toc-text">操作系统基本特性</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#进程"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">进程</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#进程定义："><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">进程定义：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#程序执行方式"><span class="post-toc-number">1.2.2.</span> <span class="post-toc-text">程序执行方式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#进程特征"><span class="post-toc-number">1.2.3.</span> <span class="post-toc-text">进程特征</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#进程-程序-数据-PCB（进程控制块）"><span class="post-toc-number">1.2.4.</span> <span class="post-toc-text">进程&#x3D;程序+数据+PCB（进程控制块）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#进程与程序的区别（重点"><span class="post-toc-number">1.2.5.</span> <span class="post-toc-text">进程与程序的区别（重点</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#进程与程序的联系（重点"><span class="post-toc-number">1.2.6.</span> <span class="post-toc-text">进程与程序的联系（重点</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#三种基本状态"><span class="post-toc-number">1.2.7.</span> <span class="post-toc-text">三种基本状态</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Os的内核"><span class="post-toc-number">1.2.8.</span> <span class="post-toc-text">Os的内核</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#进程同步-进程间的制约关系"><span class="post-toc-number">1.2.9.</span> <span class="post-toc-text">进程同步  进程间的制约关系</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#临界区（问"><span class="post-toc-number">1.2.10.</span> <span class="post-toc-text">临界区（问</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#临界资源-问"><span class="post-toc-number">1.2.11.</span> <span class="post-toc-text">临界资源(问</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#同步机制应遵循的规则（重点"><span class="post-toc-number">1.2.12.</span> <span class="post-toc-text">同步机制应遵循的规则（重点</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-7线程"><span class="post-toc-number">1.2.13.</span> <span class="post-toc-text">2.7线程</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#3-1处理机调度与死锁"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">3.1处理机调度与死锁</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#处理机调度的层次"><span class="post-toc-number">1.3.1.</span> <span class="post-toc-text">处理机调度的层次</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#死锁定理"><span class="post-toc-number">1.3.2.</span> <span class="post-toc-text">死锁定理</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#产生死锁的必要条件"><span class="post-toc-number">1.3.3.</span> <span class="post-toc-text">产生死锁的必要条件</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#产生死锁的原因"><span class="post-toc-number">1.3.4.</span> <span class="post-toc-text">产生死锁的原因</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#产生死锁的原因有两点"><span class="post-toc-number">1.3.4.1.</span> <span class="post-toc-text">产生死锁的原因有两点:</span></a></li></ol></li></ol></li></ol></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#操作系统"><span class="post-toc-number">1.</span> <span class="post-toc-text">操作系统</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#操作系统引论"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">操作系统引论</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#操作系统是什么？"><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">操作系统是什么？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#操作系统的目标"><span class="post-toc-number">1.1.2.</span> <span class="post-toc-text">操作系统的目标</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#操作系统的发展过程"><span class="post-toc-number">1.1.3.</span> <span class="post-toc-text">操作系统的发展过程</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#操作系统基本特性"><span class="post-toc-number">1.1.4.</span> <span class="post-toc-text">操作系统基本特性</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#进程"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">进程</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#进程定义："><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">进程定义：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#程序执行方式"><span class="post-toc-number">1.2.2.</span> <span class="post-toc-text">程序执行方式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#进程特征"><span class="post-toc-number">1.2.3.</span> <span class="post-toc-text">进程特征</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#进程-程序-数据-PCB（进程控制块）"><span class="post-toc-number">1.2.4.</span> <span class="post-toc-text">进程&#x3D;程序+数据+PCB（进程控制块）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#进程与程序的区别（重点"><span class="post-toc-number">1.2.5.</span> <span class="post-toc-text">进程与程序的区别（重点</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#进程与程序的联系（重点"><span class="post-toc-number">1.2.6.</span> <span class="post-toc-text">进程与程序的联系（重点</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#三种基本状态"><span class="post-toc-number">1.2.7.</span> <span class="post-toc-text">三种基本状态</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Os的内核"><span class="post-toc-number">1.2.8.</span> <span class="post-toc-text">Os的内核</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#进程同步-进程间的制约关系"><span class="post-toc-number">1.2.9.</span> <span class="post-toc-text">进程同步  进程间的制约关系</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#临界区（问"><span class="post-toc-number">1.2.10.</span> <span class="post-toc-text">临界区（问</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#临界资源-问"><span class="post-toc-number">1.2.11.</span> <span class="post-toc-text">临界资源(问</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#同步机制应遵循的规则（重点"><span class="post-toc-number">1.2.12.</span> <span class="post-toc-text">同步机制应遵循的规则（重点</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-7线程"><span class="post-toc-number">1.2.13.</span> <span class="post-toc-text">2.7线程</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#3-1处理机调度与死锁"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">3.1处理机调度与死锁</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#处理机调度的层次"><span class="post-toc-number">1.3.1.</span> <span class="post-toc-text">处理机调度的层次</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#死锁定理"><span class="post-toc-number">1.3.2.</span> <span class="post-toc-text">死锁定理</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#产生死锁的必要条件"><span class="post-toc-number">1.3.3.</span> <span class="post-toc-text">产生死锁的必要条件</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#产生死锁的原因"><span class="post-toc-number">1.3.4.</span> <span class="post-toc-text">产生死锁的原因</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#产生死锁的原因有两点"><span class="post-toc-number">1.3.4.1.</span> <span class="post-toc-text">产生死锁的原因有两点:</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#三种调度算法"><span class="post-toc-number">1.3.5.</span> <span class="post-toc-text">三种调度算法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#安全与不安全算法"><span class="post-toc-number">1.3.6.</span> <span class="post-toc-text">安全与不安全算法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#存储器层次"><span class="post-toc-number">1.3.7.</span> <span class="post-toc-text">存储器层次</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#层序"><span class="post-toc-number">1.3.8.</span> <span class="post-toc-text">层序</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#基于顺序搜索的动态分区分配算法"><span class="post-toc-number">1.3.9.</span> <span class="post-toc-text">基于顺序搜索的动态分区分配算法</span></a></li></ol></li></ol></li></ol>
         </nav>
     </aside>
 
@@ -317,6 +317,7 @@
 <h3 id="死锁定理"><a href="#死锁定理" class="headerlink" title="死锁定理"></a>死锁定理</h3><ol>
 <li>如果资源分配图中没有环路，则系统中没有死锁，如果图中存在环路则系统中可能存在死锁。</li>
 <li>如果每个资源类中只包含一个资源实例，则环路是死锁存在的充分必要条件</li>
+<li>系统处于S状态为死锁状态的充分条件是：当且仅当S状态资源分配图是不可完全简化的。</li>
 </ol>
 <h3 id="产生死锁的必要条件"><a href="#产生死锁的必要条件" class="headerlink" title="产生死锁的必要条件"></a>产生死锁的必要条件</h3><ol>
 <li>互斥</li>
@@ -328,6 +329,53 @@
 <li>竞争资源：为多个进程所共享的资源不够，引起它们对资源的竞争而产生死锁。</li>
 <li>进程推进顺序不当：在进程运行过程中，请求资源和释放资源的顺序不当，也会产生死锁。</li>
 </ol>
+<h3 id="三种调度算法"><a href="#三种调度算法" class="headerlink" title="三种调度算法"></a>三种调度算法</h3><ul>
+<li>先来先服务调度算法</li>
+<li>短作业优先调度算法</li>
+<li>时间片轮转</li>
+</ul>
+<h3 id="安全与不安全算法"><a href="#安全与不安全算法" class="headerlink" title="安全与不安全算法"></a>安全与不安全算法</h3><ul>
+<li>银行家算法</li>
+</ul>
+<h3 id="存储器层次"><a href="#存储器层次" class="headerlink" title="存储器层次"></a>存储器层次</h3><ul>
+<li>最高：cpu存储器</li>
+<li>中间：主存</li>
+<li>最低：辅层</li>
+</ul>
+<h3 id="层序"><a href="#层序" class="headerlink" title="层序"></a>层序</h3><p>用户程序要在系统中运行，必须先将它装入内存，然后再将其转变为一个可以执行的程序，会经过一下步骤：</p>
+<ol>
+<li>编译</li>
+<li>链接<ol>
+<li>静态链接方式</li>
+<li>装入时动态链接</li>
+<li>运行时动态链接</li>
+</ol>
+</li>
+<li>装入<ol>
+<li>绝对装入方式</li>
+<li>可重定位装入方式</li>
+<li>动态运行时的装入方式</li>
+</ol>
+</li>
+</ol>
+<h3 id="基于顺序搜索的动态分区分配算法"><a href="#基于顺序搜索的动态分区分配算法" class="headerlink" title="基于顺序搜索的动态分区分配算法"></a>基于顺序搜索的动态分区分配算法</h3><ol>
+<li>首次适应算法<ol>
+<li>从开始到结束，只要大小满足就 塞 进去</li>
+</ol>
+</li>
+<li>循环首次适应算法<ol>
+<li>在 首次适应算法 加上如果到了最后还没找到，就继续重第一个开始查找</li>
+</ol>
+</li>
+<li>最佳适应算法<ol>
+<li>先用小的内存空间，再用大的</li>
+</ol>
+</li>
+<li>最坏适应算法<ol>
+<li>先用大的内存空间，再用小的</li>
+</ol>
+</li>
+</ol>
 
         </div>
 
@@ -336,7 +384,7 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2022-10-11T05:22:28.655Z" itemprop="dateUpdated">2022-10-11 13:22:28</time>
+    Last updated: <time datetime="2022-10-17T06:34:21.694Z" itemprop="dateUpdated">2022-10-17 14:34:21</time>
 </span><br>
 
 
